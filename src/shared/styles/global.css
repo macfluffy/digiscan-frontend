@@ -1,0 +1,26 @@
+:root {
+    --blue-background: #2754b8;
+
+    background: var(--blue-background);
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    .flex-columns {
+        flex-direction: column;
+    }
+
+    .flex-rows {
+        flex-direction: row;
+    }
+}
+
+h6 {
+    font-size: 1rem;
+    /* padding: 0px; */
+    margin: 0px;
+}
