@@ -1,0 +1,49 @@
+#front-page-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#search-bar-container{
+    flex-wrap: nowrap;
+
+    width: 100%;
+}
+
+#front-page-logo {
+    width: 15%;
+    height: auto;
+    margin: 1rem;
+}
+
+#front-page-search-bar {
+    max-width: 100%;
+    width: 35rem;
+    
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    margin: 1rem;
+}
+
+#front-page-menu {
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.front-page-buttons {
+    --blue-button-background: #274ecf;
+    --button-text-colour: #dfe2ed;
+    
+    background-color: var(--blue-button-background);
+    color: var(--button-text-colour);
+    border: 0.5px solid var(--button-text-colour);
+    padding: 0.4rem;
+}
+
+#front-page-news {
+    margin: 1rem;
+    text-align: flex-start;
+    width: 100%;
+}
