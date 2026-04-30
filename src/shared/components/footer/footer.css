@@ -3,6 +3,7 @@
     margin: 1rem;
     align-items: flex-start;
     justify-content: none;
+    width: auto;
 }
 
 .footer-links {
