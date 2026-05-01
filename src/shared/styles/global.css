@@ -1,5 +1,7 @@
 :root {
     --blue-background: #2754b8;
+    --heading-font: 'Squada One', monospace;
+    --regular-font: 'Roboto', sans-serif;
 
     background: var(--blue-background);
 }
@@ -19,7 +21,18 @@
     }
 }
 
+h2 {
+    font-family: var(--heading-font);
+    font-size: 2rem;
+}
+
 h6 {
+    font-family: var(--regular-font);
     font-size: 1rem;
     margin: 0.2rem;
 }
+
+p, li {
+    font-family: var(--regular-font);
+    font-size: 0.9rem;
+}    
