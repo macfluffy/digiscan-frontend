@@ -27,9 +27,10 @@
 }
 
 #front-page-menu {
-    gap: 20px;
     align-items: center;
     justify-content: center;
+
+    gap: 1rem;
 }
 
 .front-page-buttons {
