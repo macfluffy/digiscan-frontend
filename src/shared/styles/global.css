@@ -34,7 +34,7 @@ h6 {
     margin: 0.2rem;
 }
 
-p, li {
+p, label, li {
     font-family: var(--regular-font);
     font-size: 0.9rem;
 }    
