@@ -12,6 +12,7 @@
 
 #front-page-logo {
     width: 15%;
+    min-width: 300px;
     height: auto;
     margin: 1rem;
 }
