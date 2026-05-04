@@ -3,6 +3,9 @@
     --heading-font: 'Squada One', monospace;
     --regular-font: 'Roboto', sans-serif;
 
+    --mobile-width: 480px;
+    --eighty-pc-mobile-width: 384px;
+
     background: var(--blue-background);
 }
 
@@ -11,6 +14,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin: auto;
 
     .flex-columns {
         flex-direction: column;
@@ -19,6 +23,13 @@
     .flex-rows {
         flex-direction: row;
     }
+}
+
+.wrapper-container {
+    width: 50%;
+    min-width: var(--eighty-pc-mobile-width);
+    margin: auto;
+    align-self: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
