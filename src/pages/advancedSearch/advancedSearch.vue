@@ -1,7 +1,7 @@
 <template>
-    <section class="flex-container flex-columns" id="advanced-search-page-container">
+    <section class="flex-container flex-columns wrapper-container" id="advanced-search-page-container">
         <section class="flex-container flex-rows advanced-search-input" id="card-name">
-            <h3>Card Name:</h3>
+            <h3 class="advanced-search-label">Card Name:</h3>
             <input 
                 type="text" 
                 class="advanced-search-text-input" 
@@ -10,7 +10,7 @@
         </section>
 
         <section class="flex-container flex-rows advanced-search-input" id="card-effects">
-            <h3>Card Effects:</h3>
+            <h3 class="advanced-search-label">Card Effects:</h3>
             <input 
                 type="checkbox" 
                 class="text-type-checkboxes"
@@ -35,7 +35,7 @@
         </section>
 
         <section class="flex-container flex-rows advanced-search-input" id="card-type">
-            <h3>Card Type:</h3>
+            <h3 class="advanced-search-label">Card Type:</h3>
             <input 
                 type="checkbox" 
                 class="rarity-checkboxes"
@@ -71,7 +71,7 @@
         </section>
 
         <section class="flex-container flex-rows advanced-search-input" id="card-level">
-            <h3>Card Level</h3>
+            <h3 class="advanced-search-label">Card Level</h3>
             <p>Card includes:</p>
             <input 
                 type="checkbox" 
@@ -116,7 +116,7 @@
         </section>
 
         <section class="flex-container flex-rows advanced-search-input" id="card-colour">
-            <h3>Card Colour:</h3>
+            <h3 class="advanced-search-label">Card Colour:</h3>
             <select id="colour-operator">
                 <option value="AND">must include</option>
                 <option value="NOT">does not contain</option>
@@ -181,7 +181,7 @@
         </section>
 
         <section class="flex-container flex-rows advanced-search-input" id="card-set">
-            <h3>Card Set:</h3>
+            <h3 class="advanced-search-label">Card Set:</h3>
             <input 
                 type="text" 
                 class="advanced-search-text-input" 
@@ -190,7 +190,7 @@
         </section>
 
         <section class="flex-container flex-rows advanced-search-input" id="block-number">
-            <h3>Block:</h3>
+            <h3 class="advanced-search-label">Block:</h3>
             <input 
                 type="text" 
                 class="advanced-search-text-input" 
@@ -199,7 +199,7 @@
         </section>
 
         <section class="flex-container flex-rows advanced-search-input" id="card-rarity">
-            <h3>Card Rarity:</h3>
+            <h3 class="advanced-search-label">Card Rarity:</h3>
             <input 
                 type="checkbox" 
                 class="rarity-checkboxes"
@@ -251,7 +251,7 @@
         </section>
 
         <section class="flex-container flex-rows advanced-search-input" id="card-cost">
-            <h3>Card Cost:</h3>
+            <h3 class="advanced-search-label">Card Cost:</h3>
             <input
                 type="checkbox"
                 class="rarity-checkboxes"
@@ -276,7 +276,7 @@
         </section>
 
         <section class="flex-container flex-rows advanced-search-input" id="digivolution-cost">
-            <h3>Digivolution Cost:</h3>
+            <h3 class="advanced-search-label">Digivolution Cost:</h3>
             <input 
                 type="text" 
                 class="advanced-search-text-input" 
@@ -285,7 +285,7 @@
         </section>
         
         <section class="flex-container flex-rows advanced-search-input" id="digimon-power">
-            <h3>Power:</h3>
+            <h3 class="advanced-search-label">Power:</h3>
             <input 
                 type="text" 
                 class="advanced-search-text-input" 
@@ -295,7 +295,7 @@
         </section>   
         
         <section class="flex-container flex-rows advanced-search-input" id="art-container">
-            <h3>Card Art:</h3>
+            <h3 class="advanced-search-label">Card Art:</h3>
             <input
                 type="checkbox"
                 class="card-art-checkboxes"

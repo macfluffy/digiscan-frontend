@@ -1,0 +1,21 @@
+.advanced-search-label {
+    width: 15%;
+    min-width: 210px;
+}
+
+.advanced-search-input {
+    flex-basis: 100%;
+    justify-content: flex-start;
+    
+}
+
+.advanced-search-text-input {
+    margin: 0 0.5rem 0 0.5rem;
+    width: 40%;
+    /* max-width: 50rem;
+    width: 25rem; */
+}
+
+.level-checkboxes:hover input ~ .c{
+    background-color: #f3de21d7;
+}
