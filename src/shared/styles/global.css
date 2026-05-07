@@ -1,5 +1,8 @@
 :root {
     --blue-background: #2754b8;
+    
+    --white-font: #ffffffde;
+    --faint-gold-font: #d7df72f1;
     --heading-font: 'Squada One', monospace;
     --regular-font: 'Roboto', sans-serif;
 
@@ -34,6 +37,7 @@
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
+    color: var(--faint-gold-font);
 }
 
 h2 {
@@ -48,4 +52,5 @@ h6 {
 p, label, li {
     font-family: var(--regular-font);
     font-size: 0.9rem;
+    color: var(--white-font);
 }    
