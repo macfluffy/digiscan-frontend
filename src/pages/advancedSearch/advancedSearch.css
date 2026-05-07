@@ -13,8 +13,6 @@
     margin: 0 0.5rem 0 0.5rem;
     width: 40%;
     min-width: var(--ninety-pc-mobile-width);
-    /* 
-    width: 25rem; */
 }
 
 .level-checkboxes:hover input ~ .c{
