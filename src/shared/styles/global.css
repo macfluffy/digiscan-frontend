@@ -4,7 +4,7 @@
     --regular-font: 'Roboto', sans-serif;
 
     --mobile-width: 480px;
-    --eighty-pc-mobile-width: 384px;
+    --ninety-pc-mobile-width: 432px;
 
     background: var(--blue-background);
 }
@@ -27,7 +27,7 @@
 
 .wrapper-container {
     width: 50%;
-    min-width: var(--eighty-pc-mobile-width);
+    min-width: var(--ninety-pc-mobile-width);
     margin: auto;
     align-self: center;
 }

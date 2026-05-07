@@ -12,7 +12,8 @@
 .advanced-search-text-input {
     margin: 0 0.5rem 0 0.5rem;
     width: 40%;
-    /* max-width: 50rem;
+    min-width: var(--ninety-pc-mobile-width);
+    /* 
     width: 25rem; */
 }
 
