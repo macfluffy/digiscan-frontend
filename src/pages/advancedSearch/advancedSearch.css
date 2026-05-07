@@ -15,6 +15,15 @@
     min-width: var(--ninety-pc-mobile-width);
 }
 
-.level-checkboxes:hover input ~ .c{
-    background-color: #f3de21d7;
+.advanced-search-checkboxes {   
+    height: 20px;
+    width: 20px;
+
+    &:checked {
+        accent-color: #46cc46ef;
+    }
+
+    &:checked:hover {
+        accent-color: #db0e0eef;
+    }
 }
