@@ -6,11 +6,11 @@
 .advanced-search-input {
     flex-basis: 100%;
     justify-content: flex-start;
-    
+
+    gap: 8px;
 }
 
 .advanced-search-text-input {
-    margin: 0 0.5rem 0 0.5rem;
     width: 40%;
     min-width: var(--ninety-pc-mobile-width);
 }
