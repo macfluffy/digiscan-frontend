@@ -10,3 +10,4 @@ Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://
 |------|-------------|
 | VueJS | Website framework |
 | Vite | Developer tool |
+| VueRouter | Adds single page application routing to the vue app |
