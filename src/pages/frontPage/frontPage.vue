@@ -1,9 +1,16 @@
 <script setup>
+    import { useRouter } from "vue-router";
+
     import { api } from '../../api/api.js';
-    import { viewAllSets } from '../../api/cardSetServices.js';
 
     import logo from '../../assets/digiscan_logo.svg';
     import SearchBar from '../../shared/components/searchBar/searchBar.vue';
+
+    const router = useRouter();
+
+    async function viewAllSets() {
+        router.push('/sets');
+    }
 
     async function getAllCards() {
         const response = await api.getCards();
