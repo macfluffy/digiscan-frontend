@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import { RouterLink } from 'vue-router';
+
+</script>
+
 <template>
     <footer>
         <section class="footer flex-container flex-rows" id="footer-menus">
@@ -5,7 +10,7 @@
                 <h6>Cards</h6>
                 <ul class="footer-links">
                     <li>Advanced Search</li>
-                    <li>All Sets</li>
+                    <li><RouterLink to="/sets">Sets</RouterLink></li>
                     <li>Random Card</li>
                 </ul>
             </section>
