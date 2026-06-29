@@ -1,16 +1,12 @@
 <script setup>
     import { api } from '../../api/api.js';
+    import { viewAllSets } from '../../api/cardSetServices.js';
 
     import logo from '../../assets/digiscan_logo.svg';
     import SearchBar from '../../shared/components/searchBar/searchBar.vue';
 
     async function getAllCards() {
         const response = await api.getCards();
-        console.log(response);
-    }
-
-    async function viewAllSets() {
-        const response = await api.getSets();
         console.log(response);
     }
 </script>
