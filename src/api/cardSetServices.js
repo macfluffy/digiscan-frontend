@@ -1,6 +1,6 @@
 import { api } from "./api.js";
 
-export async function viewAllSets() {
+export async function getAllSets() {
     const response = await api.getSets();
-    console.log(response);
+    return response;
 }
