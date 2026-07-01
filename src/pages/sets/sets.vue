@@ -21,7 +21,7 @@
 </script>
 
 <template>
-    <table id="card-sets">
+    <table class="center" id="card-sets">
         <thead>
             <tr>
                 <th>Set Number</th>
@@ -31,12 +31,14 @@
             </tr>
         </thead>
         <tbody>
-            <tr v-for="set in sets" :key="set.id">
+            <tr class="hoverable-row" v-for="set in sets" :key="set.id">
                 <td>{{ set.setNumber }}</td>
                 <td>{{ set.setName }}</td>
-                <td>{{ set.blockNumber }}</td>
-                <td>{{ set.printDate }}</td>
+                <td class="block-number">{{ set.blockNumber }}</td>
+                <td class="print-date">{{ set.printDate }}</td>
             </tr>
         </tbody>
     </table>
 </template>
+
+<style scoped src="./sets.css" />
