@@ -12,6 +12,10 @@
         router.push('/sets');
     }
 
+    async function gotoAdvancedSearch() {
+        router.push('/advancedSearch');
+    }
+
     async function getAllCards() {
         const response = await api.getCards();
         console.log(response);
@@ -36,7 +40,7 @@
         </div>
         
         <section class="flex-container flex-rows" id="front-page-menu">
-            <button class="front-page-buttons" @click="getAllCards">Advanced Search</button>
+            <button class="front-page-buttons" @click="gotoAdvancedSearch">Advanced Search</button>
             <button class="front-page-buttons" @click="viewAllSets">View All Sets</button>
             <button class="front-page-buttons" @click="getAllCards">Random Card</button>
         </section>

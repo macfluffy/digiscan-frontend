@@ -9,7 +9,7 @@ import { RouterLink } from 'vue-router';
             <section class= "footer flex-container flex-columns" id="cards-footer">
                 <h6>Cards</h6>
                 <ul class="footer-links">
-                    <li>Advanced Search</li>
+                    <li><RouterLink to="/advancedSearch">Advanced Search</RouterLink></li>
                     <li><RouterLink to="/sets">Sets</RouterLink></li>
                     <li>Random Card</li>
                 </ul>
