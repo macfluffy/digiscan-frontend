@@ -6,7 +6,7 @@
     const query = ref('');
 
     function submitSearch() {
-        const searchQuery = query.value.trim;
+        const searchQuery = query.value.trim();
         router.push({
             path: "/search",
             query: {
@@ -18,12 +18,12 @@
 </script>
 
 <template>
-    <form>
+    <form @submit.prevent = "submitSearch">
         <input 
-            type = "text" 
+            type = "search" 
+            v-model = "query"
             placeholder = "Enter card name here" 
             class = "search-bar"
-            @submit="submitSearch"
         >
     </form>
 </template>
