@@ -22,7 +22,7 @@ async function clientRequest(method, path, body) {
 
 export const api = {
     health: () => clientRequest('GET', '/health'),
-    getCard: (query) => clientRequest('GET', `/cards?{$query}`),
+    getCard: (query) => clientRequest('GET', `/cards?${query}`),
     getCards: () => clientRequest('GET', '/cards'),
     getSets: () => clientRequest('GET', '/cardSets'),
 };
