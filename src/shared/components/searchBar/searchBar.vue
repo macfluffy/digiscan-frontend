@@ -7,11 +7,14 @@
 
     function submitSearch() {
         const searchQuery = query.value.trim();
+        console.log('pushing with:', JSON.stringify({ userName: searchQuery || null }))
         router.push({
             path: "/search",
             query: {
-                // Return a null if the searchQuery is empty
-                cardName: searchQuery || null
+                // Return an undefined value if 
+                // the searchQuery is empty. Null
+                // will append ?cardName to the url
+                cardName: searchQuery || undefined
             }
         });
     }   
