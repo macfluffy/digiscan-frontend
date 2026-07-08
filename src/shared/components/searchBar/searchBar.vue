@@ -7,7 +7,6 @@
 
     function submitSearch() {
         const searchQuery = query.value.trim();
-        console.log('pushing with:', JSON.stringify({ userName: searchQuery || null }))
         router.push({
             path: "/search",
             query: {
