@@ -47,7 +47,7 @@
                 cardsPerPage: response.pagination.cardsPerPage,
                 totalCardsFound: response.pagination.total,
                 totalPages: response.pagination.totalPages
-            }
+            }            
         } 
         catch (errorMessage) {
             console.error(errorMessage);
@@ -70,7 +70,7 @@
     <p>Showing cards {{ minCardRange }} to {{ maxCardRange }} of {{ pagination.totalCardsFound }} found.</p>
     <p v-for="result in results"
         :key ="result.id">
-        <RouterLink :to = "{ path: `/card/${result.set}/${result.cardNumber}/${result.cardName}` }">
+        <RouterLink :to = "{ path: `/card/${result.card_sets[0].setNumber}/${result.cardNumber}/${result.cardName}` }">
             ID: {{ result.id }}
             Card Name: {{ result.cardName }}
             Card Number: {{ result.cardNumber }}
