@@ -5,11 +5,11 @@ const apiBaseURL = import.meta.env.VITE_API_BASE_URL || '/api';
 function constructQuery(query) {
     const searchQuery = new URLSearchParams();
     if (query.cardName) searchQuery.set("cardName", query.cardName);
+    if (query.cardNumber) searchQuery.set("cardNumber", query.cardNumber);
     if (query.cardText) searchQuery.set("cardText", query.cardText);
     if (query.cardType) searchQuery.set("cardType", query.cardType);
     if (query.costType) searchQuery.set("costType", query.costType);
     if (query.page) searchQuery.set("page", query.page);
-
     return searchQuery.toString();
 }
 
@@ -37,6 +37,7 @@ export const api = {
                             const searchQuery = constructQuery(query);
                             return clientRequest('GET', `/cards?${searchQuery}`);
                         },
+    getCardById: (id) => clientRequest('GET', `/cards?cardNumber=${id}`),
     getCards: () => clientRequest('GET', '/cards'),
     getSets: () => clientRequest('GET', '/cardSets'),
 };
