@@ -14,6 +14,7 @@
         try {
             const response = await api.getCardById(id)
             results.value = response.data;
+            console.log("Response:", results);
         }
         catch (errorMessage) {
             console.error(errorMessage);
@@ -33,13 +34,83 @@
 
 <template>
     <div v-if="isLoading">Loading...</div>
-    <div v-else-if="results">
-        <p v-for="card in results"
-            :key = "card.id">
-            ID: {{ card.id }}
-            Set: {{ card.setName }}
-            Card Name: {{ card.cardName }}
-            Card Number: {{ card.cardNumber }}
-        </p>
+    <div class="flex-container flex-columns" 
+        v-else-if="results"
+        v-for="card in results"
+        :key = "card.id">
+
+        <img class="card-showcase" 
+            :src="api.getCardImageURL(card.cardNumber)"
+            :alt="card.cardName" />
+
+        <section id="card-details">
+            <p class="capitalise" id="cardname">{{ card.cardName }}</p>
+            
+            <section class="grid">
+                <template v-if="card.level">
+                    <p class="detail-heading">Level</p>
+                    <p>{{ card.level }}</p>
+                </template>
+
+                <p class="detail-heading">Type</p>
+                <p class="capitalise">
+                    {{ 
+                        card.card_types
+                        .map(type => type.cardType)
+                        .join(', ') 
+                    }}
+                </p>
+                
+                <template v-if="card.cardText">
+                    <p class="detail-heading">Effects</p>
+                    <p>{{ card.cardText }}</p>
+                </template>
+
+                <template v-if="card.inheritable">
+                    <p class="detail-heading">Inherited Effect</p> 
+                    <p>{{ card.inheritable }}</p>
+                </template>
+                
+                <template v-if="card.card_costs" 
+                    v-for="cost in card.card_costs">
+                    <p class="detail-heading capitalise">{{ cost.costType }} Cost</p> 
+                    <p class="capitalise">{{ cost.CardCostings.cardCost }}</p>
+                </template>
+
+                <template v-if="card.power">
+                    <p class="detail-heading">Power</p> 
+                    <p>{{ card.power }} DP</p>
+                </template>
+
+                <p class="detail-heading">
+                    Colours
+                </p>
+                <p class="capitalise">
+                    {{ 
+                        card.colours
+                        .map(colour => colour.colourName)
+                        .join(', ') 
+                    }}
+                </p>
+
+                <template v-if="card.card_traits">
+                    <p class="detail-heading">Traits</p>
+                    <p>
+                        {{ 
+                            card.card_traits
+                            .map(trait => trait.cardTrait)
+                            .join(', ') 
+                        }}
+                    </p>
+                </template>
+            </section>
+        </section>
+
+        <section id="card-printing-details">
+            <p v-for="set in card.card_sets">{{ set.setNumber }} {{ set.setName }}</p>
+            <p class="capitalise">{{ card.cardNumber }} {{ card.rarity }}</p>            
+        </section>
     </div>
 </template>
+
+<style scoped src="./card.css" />
