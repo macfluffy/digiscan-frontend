@@ -1,8 +1,14 @@
 :root {
     --blue: #2754b8;
+    --navy-blue: #0A1F44;
+    --steel-blue: #2D3B55;
     --white: #ffffffde;
+    --orange: #FF6B35;
+    --red: #E63946;
+    --yellow: #FFD23F;
     --faint-gold: #d7df72f1;
     --gold: #fdfa2b;
+    --purple: #7B2FF7;
 
     --heading-font: 'Squada One', monospace;
     --regular-font: 'Roboto', sans-serif;
@@ -10,7 +16,7 @@
     --mobile-width: 480px;
     --ninety-pc-mobile-width: 432px;
 
-    background: var(--blue);
+    background: var(--navy-blue);
 }
 
 .flex-container {
@@ -36,6 +42,10 @@
     align-self: center;
 }
 
+.grid {
+    display: grid;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
     color: var(--faint-gold);
@@ -50,7 +60,7 @@ h6 {
     margin: 0.2rem;
 }
 
-p, label, li {
+span, p, label, li {
     font-family: var(--regular-font);
     font-size: 0.9rem;
     color: var(--white);
