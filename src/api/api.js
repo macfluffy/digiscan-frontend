@@ -1,6 +1,7 @@
 import { deleteSuccessful } from "./response.js";
 
 const apiBaseURL = import.meta.env.VITE_API_BASE_URL || '/api';
+const imageBaseURL = import.meta.env.VITE_IMG_BASE_URL || '/assets/cards';
 
 function constructQuery(query) {
     const searchQuery = new URLSearchParams();
@@ -38,6 +39,7 @@ export const api = {
                             return clientRequest('GET', `/cards?${searchQuery}`);
                         },
     getCardById: (id) => clientRequest('GET', `/cards?cardNumber=${id}`),
+    getCardImageURL: (cardNumber) => `${imageBaseURL}/${cardNumber}.webp`,  // Remove the .webp and move to a dynamic call when using a file host for images
     getCards: () => clientRequest('GET', '/cards'),
     getSets: () => clientRequest('GET', '/cardSets'),
 };
