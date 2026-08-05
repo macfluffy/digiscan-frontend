@@ -5,8 +5,19 @@
     const router = useRouter();
     const query = ref('');
 
+    function capitaliseFirstLetter(searchQuery) {
+        const firstLetterIndex = 0;
+        const restOfTheWordIndex = 1;
+
+        return (
+                searchQuery.charAt(firstLetterIndex).toUpperCase() 
+                + 
+                searchQuery.slice(restOfTheWordIndex)
+            );
+    }
+
     function submitSearch() {
-        const searchQuery = query.value.trim();
+        const searchQuery = capitaliseFirstLetter(query.value.trim());
         router.push({
             path: "/search",
             query: {
