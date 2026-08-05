@@ -41,5 +41,6 @@ export const api = {
     getCardById: (id) => clientRequest('GET', `/cards?cardNumber=${id}`),
     getCardImageURL: (cardNumber) => `${imageBaseURL}/${cardNumber}.webp`,  // Remove the .webp and move to a dynamic call when using a file host for images
     getCards: () => clientRequest('GET', '/cards'),
+    getSet: (query) => clientRequest('GET', `/cardSets/${query}`),
     getSets: () => clientRequest('GET', '/cardSets'),
 };
