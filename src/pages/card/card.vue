@@ -12,7 +12,7 @@
     async function fetchCard(id) {
         isLoading.value = true;
         try {
-            const response = await api.getCardById(id)
+            const response = await api.getCardById(id);
             results.value = response.data;
             console.log("Response:", results);
         }
