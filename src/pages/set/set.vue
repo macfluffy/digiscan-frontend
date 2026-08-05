@@ -37,7 +37,7 @@
 
         <p>Showing cards found.</p>
 
-        <template class="grid display-cards" 
+        <template class="display-cards" 
             v-for="result in results"
             :key ="result.id">
             <RouterLink :to = "{ path: `/card/${result.card_sets[0].setNumber}/${result.cardNumber}/${result.cardName}` }">

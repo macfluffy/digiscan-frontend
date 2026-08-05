@@ -1,16 +1,9 @@
 .results-cards {
     width: 15rem;
-    margin: 5px;     
-}
-
-.grid {
-    grid-template-columns: repeat(3 1fr);
-    /* grid-template-rows: auto auto; */
+    margin: 5px;  
 }
 
 .display-cards {
     align-self: flex-start;
-    padding: 10px;
-
-    
+    padding: 10px;  
 }
