@@ -49,11 +49,11 @@
             <section class="grid">
                 <template v-if="card.level">
                     <p class="detail-heading">Level</p>
-                    <p>{{ card.level }}</p>
+                    <p class="detail-text">{{ card.level }}</p>
                 </template>
 
                 <p class="detail-heading">Type</p>
-                <p class="capitalise">
+                <p class="capitalise detail-text">
                     {{ 
                         card.card_types
                         .map(type => type.cardType)
@@ -63,29 +63,29 @@
                 
                 <template v-if="card.cardText">
                     <p class="detail-heading">Effects</p>
-                    <p>{{ card.cardText }}</p>
+                    <p class="detail-text">{{ card.cardText }}</p>
                 </template>
 
                 <template v-if="card.inheritable">
                     <p class="detail-heading">Inherited Effect</p> 
-                    <p>{{ card.inheritable }}</p>
+                    <p class="detail-text">{{ card.inheritable }}</p>
                 </template>
                 
                 <template v-if="card.card_costs" 
                     v-for="cost in card.card_costs">
                     <p class="detail-heading capitalise">{{ cost.costType }} Cost</p> 
-                    <p class="capitalise">{{ cost.CardCostings.cardCost }}</p>
+                    <p class="detail-text">{{ cost.CardCostings.cardCost }}</p>
                 </template>
 
                 <template v-if="card.power">
                     <p class="detail-heading">Power</p> 
-                    <p>{{ card.power }} DP</p>
+                    <p class="detail-text">{{ card.power }} DP</p>
                 </template>
 
                 <p class="detail-heading">
                     Colours
                 </p>
-                <p class="capitalise">
+                <p class="capitalise detail-text">
                     {{ 
                         card.colours
                         .map(colour => colour.colourName)
@@ -95,7 +95,7 @@
 
                 <template v-if="card.card_traits">
                     <p class="detail-heading">Traits</p>
-                    <p>
+                    <p class="detail-text">
                         {{ 
                             card.card_traits
                             .map(trait => trait.cardTrait)
