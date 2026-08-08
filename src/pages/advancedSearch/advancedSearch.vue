@@ -117,7 +117,7 @@
 
         <section class="flex-container flex-rows advanced-search-input" id="card-colour">
             <h3 class="advanced-search-label">Card Colour:</h3>
-            <select id="colour-operator">
+            <select class="dropdown-menu" id="colour-operator">
                 <option value="AND">must include</option>
                 <option value="NOT">does not contain</option>
                 <option value="OR">contains at least one</option>
@@ -313,6 +313,8 @@
             />
             <label for="parallel-rare">Parallel Rare</label>
         </section>
+
+        <button>Search</button>
     </section>
 </template>
 

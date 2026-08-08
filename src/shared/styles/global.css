@@ -9,6 +9,8 @@
     --faint-gold: #d7df72f1;
     --gold: #fdfa2b;
     --purple: #7B2FF7;
+    --silver: #D9D9D9;
+    --gunmetal: #909096;
 
     --heading-font: 'Squada One', monospace;
     --regular-font: 'Roboto', sans-serif;
@@ -64,4 +66,14 @@ span, p, label, li {
     font-family: var(--regular-font);
     font-size: 0.9rem;
     color: var(--white);
-}    
+}
+
+button {
+    border: none;
+    padding: 8px 100px;
+    background-color: var(--silver);
+
+    text-decoration: none;
+
+    cursor: pointer;
+}
