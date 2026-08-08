@@ -36,3 +36,10 @@ tr {
         background-color: rgb(116, 144, 153);
     }
 }
+
+.set-number {
+    font-family: var(--regular-font);
+    color: var(--white);   
+
+    text-decoration: none;
+}

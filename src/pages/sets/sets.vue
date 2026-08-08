@@ -32,7 +32,12 @@
         </thead>
         <tbody>
             <tr class="hoverable-row" v-for="set in sets" :key="set.id">
-                <td><RouterLink :to = "{ path: `/set/${set.setNumber}` }">{{ set.setNumber }}</RouterLink></td>
+                <td>
+                    <RouterLink :to="{ path: `/set/${set.setNumber}` }"
+                        class="set-number">
+                        {{ set.setNumber }}
+                    </RouterLink>
+                </td>
                 <td>{{ set.setName }}</td>
                 <td class="block-number">{{ set.blockNumber }}</td>
                 <td class="print-date">{{ set.printDate }}</td>
