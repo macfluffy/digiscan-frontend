@@ -1,11 +1,24 @@
 <script setup>
-  import Header from './shared/components/header/header.vue';
-  import Footer from './shared/components/footer/footer.vue';
-  // import SearchBar from './shared/components/searchBar/searchBar.vue'
+  import { computed } from 'vue';
+  import { useRoute } from 'vue-router';
+  
+  import HomeLayout from './shared/layouts/homeLayout/homeLayout.vue';
+  import DefaultLayout from './shared/layouts/defaultLayout/defaultLayout.vue';
+
+  const route = useRoute();
+  const layouts = {
+    DefaultLayout,
+    HomeLayout
+  }
+
+  const currentLayout = computed(() => {
+    const layoutName = route.meta.layout || 'DefaultLayout';
+    return layouts[layoutName];
+  });
 </script>
 
 <template>
-  <Header />
-  <RouterView />
-  <Footer />
+  <component :is="currentLayout">
+    <RouterView />
+  </component>
 </template>
