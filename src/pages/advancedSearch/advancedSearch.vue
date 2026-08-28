@@ -111,9 +111,9 @@
             <input 
                 type="checkbox" 
                 class="advanced-search-checkboxes"
-                id="digi-egg"
+                id="digiegg"
                 name="cardType" 
-                value="digi-egg" 
+                value="digiegg" 
             />
             <label for="digi-egg">Digi-Egg</label>
             <input 
