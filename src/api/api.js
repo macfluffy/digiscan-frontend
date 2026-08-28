@@ -3,6 +3,7 @@ import { deleteSuccessful } from "./response.js";
 const apiBaseURL = import.meta.env.VITE_API_BASE_URL || '/api';
 const imageBaseURL = import.meta.env.VITE_IMG_BASE_URL || '/assets/cards';
 
+// This returns an empty string and does a full search if the params don't exist
 function constructQuery(query) {
     const searchQuery = new URLSearchParams();
     if (query.cardName) searchQuery.set("cardName", query.cardName);
@@ -10,6 +11,7 @@ function constructQuery(query) {
     if (query.cardText) searchQuery.set("cardText", query.cardText);
     if (query.cardType) searchQuery.set("cardType", query.cardType);
     if (query.costType) searchQuery.set("costType", query.costType);
+    if (query.level) searchQuery.set("level", query.level);
     if (query.page) searchQuery.set("page", query.page);
     return searchQuery.toString();
 }
@@ -41,6 +43,7 @@ export const api = {
     getCardById: (id) => clientRequest('GET', `/cards?cardNumber=${id}`),
     getCardImageURL: (cardNumber) => `${imageBaseURL}/${cardNumber}.webp`,  // Remove the .webp and move to a dynamic call when using a file host for images
     getCards: () => clientRequest('GET', '/cards'),
+    getRandomCard: () => clientRequest('GET', '/cards/random'),
     getSet: (query) => clientRequest('GET', `/cardSets/${query}`),
     getSets: () => clientRequest('GET', '/cardSets'),
 };
