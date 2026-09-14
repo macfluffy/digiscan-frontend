@@ -1,4 +1,5 @@
 :root {
+    /* General Colours */
     --blue: #2754b8;
     --navy-blue: #0A1F44;
     --steel-blue: #2D3B55;
@@ -17,6 +18,12 @@
 
     --mobile-width: 480px;
     --ninety-pc-mobile-width: 432px;
+
+    /* Buttons */
+    --blue-button-background: #274ecf;
+    --dark-blue-button-background: #3f4d7c85;
+    --light-blue-button-background: #546dc2;
+    --button-text-colour: #dfe2ed;
 
     background: var(--navy-blue);
 }
