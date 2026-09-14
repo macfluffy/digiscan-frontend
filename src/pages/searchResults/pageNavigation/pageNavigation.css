@@ -1,0 +1,18 @@
+.pageNav {
+    background-color: var(--blue-button-background);
+    color: var(--button-text-colour);
+    border: 0.5px solid var(--button-text-colour);
+    padding: 0.4rem;
+
+    align-self: center;
+    margin: 5px;
+    width: 50px;
+
+    &:hover {
+        background-color: var(--light-blue-button-background);
+    }
+}
+
+.pageNav:disabled {
+    background-color: var(--dark-blue-button-background);    
+}
