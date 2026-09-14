@@ -1,9 +1,1 @@
-.results-cards {
-    width: 15rem;
-    margin: 5px;  
-}
-
-.display-cards {
-    align-self: flex-start;
-    padding: 10px;  
-}
+@import "../../shared/styles/cardGallery.css";
