@@ -1,11 +1,13 @@
 <script setup>
     import { computed, ref, watch } from 'vue';
-    import { useRoute } from 'vue-router';
+    import { useRoute, useRouter } from 'vue-router';
 
     import { api } from '../../api/api';
     import { getAllCards } from '../../api/cardServices';
+    import PageNavigation from './pageNavigation/pageNavigation.vue';
 
     const route = useRoute();
+    const router = useRouter();
     
     const isLoading = ref(false);
     const results = ref([]);
@@ -34,6 +36,16 @@
         );
     });
 
+    // Page protection is handled by the pageNavigation component
+    function gotoPage(page) {
+        router.push({
+            query: {
+                ...route.query,
+                page: page
+            }
+        });
+    }
+
     async function fetchResults(query, page = 1) {
         isLoading.value = true;
         try {
@@ -47,7 +59,7 @@
                 cardsPerPage: response.pagination.cardsPerPage,
                 totalCardsFound: response.pagination.total,
                 totalPages: response.pagination.totalPages
-            }            
+            }   
         } 
         catch (errorMessage) {
             console.error(errorMessage);
@@ -56,7 +68,7 @@
         finally {
             isLoading.value = false;
         }
-    }
+    }    
 
     watch(
         () => [route.query, route.query.page],              // What we're watching
@@ -77,5 +89,15 @@
                     :src="api.getCardImageURL(result.cardNumber)"
                     :alt="result.cardName" />
         </RouterLink>
-    </p>
+    </template>
+   
+    <template class="flex-container flex-rows">
+        <PageNavigation 
+            :currentPage="Number(pagination.currentPage)"
+            :totalPages="Number(pagination.totalPages)"
+            @gotoPage="gotoPage"
+        />
+    </template>
 </template>
+
+<style scoped src="./searchResults.css" />
