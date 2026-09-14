@@ -68,12 +68,14 @@
 
 <template>
     <p>Showing cards {{ minCardRange }} to {{ maxCardRange }} of {{ pagination.totalCardsFound }} found.</p>
-    <p v-for="result in results"
+
+    <template class="display-cards" 
+        v-for="result in results"
         :key ="result.id">
         <RouterLink :to = "{ path: `/card/${result.card_sets[0].setNumber}/${result.cardNumber}/${result.cardName}` }">
-            ID: {{ result.id }}
-            Card Name: {{ result.cardName }}
-            Card Number: {{ result.cardNumber }}
+            <img class="results-cards"
+                    :src="api.getCardImageURL(result.cardNumber)"
+                    :alt="result.cardName" />
         </RouterLink>
     </p>
 </template>
