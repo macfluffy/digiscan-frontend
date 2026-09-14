@@ -39,6 +39,10 @@
     color: var(--button-text-colour);
     border: 0.5px solid var(--button-text-colour);
     padding: 0.4rem;
+
+    &:hover {
+        background-color: var(--light-blue-button-background);
+    }
 }
 
 #front-page-news {
