@@ -40,3 +40,5 @@
         >
     </form>
 </template>
+
+<style scoped src="./searchBar.css" />
