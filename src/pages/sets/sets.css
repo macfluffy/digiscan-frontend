@@ -34,6 +34,8 @@ tr {
 
     &.hoverable-row:hover {
         background-color: rgb(116, 144, 153);
+
+        cursor: pointer;
     }
 }
 
