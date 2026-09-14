@@ -6,6 +6,10 @@
     import logo from '../../../assets/digiscan_header_logo_black_white.png';
 
     const router = useRouter();
+
+    async function gotoAdvancedSearch() {
+        router.push('/advancedSearch');
+    }
 </script>
 
 <template>
@@ -18,6 +22,8 @@
         </RouterLink>
 
         <SearchBar id="header-search-bar" />
+
+        <button class="header-buttons" @click="gotoAdvancedSearch">Advanced</button>
     </div>
 </template>
 

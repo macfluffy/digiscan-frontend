@@ -4,3 +4,22 @@
 
     margin-right: 10px;
 }
+
+#header-search-bar {
+    width: 40rem;
+}
+
+.header-buttons {
+    background-color: var(--blue-button-background);
+    color: var(--button-text-colour);
+    border: 0.5px solid var(--button-text-colour);
+    padding: 0.4rem;
+
+    align-self: center;
+    margin: 5px;
+    width: 80px;
+
+    &:hover {
+        background-color: var(--light-blue-button-background);
+    }
+}
