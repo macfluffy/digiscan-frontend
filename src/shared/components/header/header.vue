@@ -23,7 +23,7 @@
 
         <SearchBar id="header-search-bar" />
 
-        <button class="header-buttons" @click="gotoAdvancedSearch">Advanced</button>
+        <button class="header-buttons holographic-buttons" @click="gotoAdvancedSearch">Advanced</button>
     </div>
 </template>
 

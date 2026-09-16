@@ -408,7 +408,7 @@
             <label for="parallel-rare">Parallel Rare</label>
         </fieldset>
 
-        <button id="advanced-search-button">
+        <button class="holographic-buttons" id="advanced-search-button">
             Search
         </button>
     </form>

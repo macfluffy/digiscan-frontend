@@ -84,3 +84,21 @@ button {
 
     cursor: pointer;
 }
+
+.holographic-buttons {
+    background-color: var(--blue-button-background);
+    
+    /* Give the buttons that holographic transparency and glow */
+    opacity: 80%;    
+    box-shadow: 
+        1px 1px 2px white,
+        2px 2px 10px var(--gunmetal),
+        1px 1px 3px var(--white) inset;
+
+    /* This gives the text on the buttons a bit of that CRT fuzz */
+    text-shadow: 2px 2px 5px var(--button-text-colour);
+
+    &:hover {
+        opacity: 65%
+    }
+}
