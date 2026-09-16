@@ -13,6 +13,10 @@
         router.push(`/set/${setNumber}`);
     }
 
+    function isSingleDigit(blockNumber) {
+        return blockNumber < 10;
+    }
+
     onMounted(async () => {
         loading.value = true;
         try {
@@ -44,7 +48,11 @@
                 @click="gotoSet(set.setNumber)">
                 <td class="set-number">{{ set.setNumber }}</td>
                 <td>{{ set.setName }}</td>
-                <td class="block-number">{{ set.blockNumber }}</td>
+                <td class="block-number">
+                    &lt;
+                    <template v-if="isSingleDigit(set.blockNumber)">0</template>
+                    {{ set.blockNumber }}&gt;
+                </td>
                 <td class="print-date">{{ set.printDate }}</td>
             </tr>
         </tbody>
