@@ -59,7 +59,7 @@
                 cardsPerPage: response.pagination.cardsPerPage,
                 totalCardsFound: response.pagination.total,
                 totalPages: response.pagination.totalPages
-            }   
+            } 
         } 
         catch (errorMessage) {
             console.error(errorMessage);
@@ -81,23 +81,26 @@
 <template>
     <p>Showing cards {{ minCardRange }} to {{ maxCardRange }} of {{ pagination.totalCardsFound }} found.</p>
 
-    <template class="display-cards" 
-        v-for="result in results"
-        :key ="result.id">
-        <RouterLink :to = "{ path: `/card/${result.card_sets[0].setNumber}/${result.cardNumber}/${result.cardName}` }">
-            <img class="results-cards"
-                    :src="api.getCardImageURL(result.cardNumber)"
-                    :alt="result.cardName" />
+    <div class="display-cards">
+        <RouterLink 
+            v-for="result in results"
+            :key ="result.id"
+            class="card-link"
+            :to = "{ path: `/card/${result.card_sets[0].setNumber}/${result.cardNumber}/${result.cardName}` }">
+            <img 
+                class="results-cards"
+                :src="api.getCardImageURL(result.cardNumber)"
+                :alt="result.cardName" />
         </RouterLink>
-    </template>
+    </div>
    
-    <template class="flex-container flex-rows">
+    <div class="flex-container flex-rows">
         <PageNavigation 
             :currentPage="Number(pagination.currentPage)"
             :totalPages="Number(pagination.totalPages)"
             @gotoPage="gotoPage"
         />
-    </template>
+    </div>
 </template>
 
 <style scoped src="./searchResults.css" />

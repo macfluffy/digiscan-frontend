@@ -35,18 +35,20 @@
     <div v-if="isLoading">Loading...</div>
     <div v-else-if="results">
 
-        <p>Showing cards found.</p>
+        <p>Showing all cards found in set "{{ route.params.setNumber }}".</p>
 
-        <template class="display-cards" 
-            v-for="result in results"
-            :key ="result.id">
-            <RouterLink :to = "{ path: `/card/${result.card_sets[0].setNumber}/${result.cardNumber}/${result.cardName}` }">
-                <img class="results-cards"
+        <div class="display-cards">
+            <RouterLink 
+                v-for="result in results"
+                :key ="result.id"
+                class="card-link"
+                :to = "{ path: `/card/${result.card_sets[0].setNumber}/${result.cardNumber}/${result.cardName}` }">
+                <img 
+                    class="results-cards"
                     :src="api.getCardImageURL(result.cardNumber)"
                     :alt="result.cardName" />
             </RouterLink>
-        </template>
-
+        </div>
     </div>
 </template>
 

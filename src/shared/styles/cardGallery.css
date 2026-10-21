@@ -1,9 +1,37 @@
 .results-cards {
-    width: 15rem;
-    margin: 5px;  
+    display: block;
+    flex: 1 1 100%;
+
+    width: 100%;     /* fill the grid cell instead of a fixed 15rem */
+    height: auto;
 }
 
+.card-link { display: block; }
+
 .display-cards {
-    align-self: flex-start;
-    padding: 10px;  
+    --max-phone-screen-size: 8rem;   
+    --min-cards-on-screen: 2; 
+    --gap: 10px;
+
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    display: grid;
+    gap: var(--gap);
+
+    padding: var(--gap);
+
+
+    /* Fit as many columns capping at 5 for PC screens, 
+    and 2 for mobiles */
+    grid-template-columns: repeat(
+        auto-fill,
+        minmax(
+            max(
+                min(8rem, calc((100% - 10px) / 2 - 1px)),
+                calc((100% - 4 * 10px) / 5)
+            ),
+            1fr
+        )
+    );
 }
