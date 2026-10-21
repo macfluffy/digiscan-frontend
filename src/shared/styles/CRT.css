@@ -1,0 +1,127 @@
+/* ==========================================================================
+   Usage: put data-theme="mid-dark" or data-theme="mid-light" on .crt-page.
+   ========================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600&family=VT323&display=swap");
+
+/* ---------- THEME ---------- */
+.crt-theme {
+    --dimmer-flicker-opacity: .85;  
+    --dim-flicker-opacity: .92;
+    
+    &[data-theme = "dark"] {
+        --body-bg-colour: #0b2160;
+        --page-bg-colour: radial-gradient(ellipse at 50% 0%, #2b58b5 0%, #132e74 50%, #0b1e4c 100%);
+        --general-text-colour: #eaf8ff;  
+        --heading: #fff;  
+
+        --grain-light: rgba(255,255,255,.07);  
+        --grain-dark: rgba(0,0,30,.12);
+        --vig-edge: rgba(0,0,10,.65);  
+        --vig-inset: rgba(0,0,20,.7);
+        --roll: rgba(130,210,255,.12);
+
+        --fringe-light: rgba(94,231,255,.85);  
+        --fringe-shadow: rgba(0,30,190,.9);
+        --halo: 0 0 14px rgba(94,231,255,.7);
+    }
+
+    &[data-theme = "light"] {
+        --body-bg-colour: #a9c6f5;
+        --page-bg-colour: radial-gradient(ellipse at 50% 0%,  #d2e3ff 0%,  #9bb9f0 50%,  #7597dc 100%);
+        --general-text-colour: #07163a;  
+        --heading: #07163a;  
+
+        --grain-light: rgba(255, 255, 255, .22);  
+        --grain-dark: rgba(10, 40, 140, .06);
+        --vig-edge: rgba(20, 60, 160, .38);  
+        --vig-inset: rgba(20, 60, 160, .35);
+        --roll: rgba(255, 255, 255, .4);
+
+        --fringe-light: rgba(255, 255, 255, .9);  
+        --fringe-shadow: rgba(30, 80, 220, .45);
+        --halo: 0 0 14px rgba(47, 123, 255, .45);
+    }
+}
+
+/* ---------- PAGE CRT OVERLAYS ---------- */
+.crt-page {
+    position: relative; 
+    overflow: hidden; 
+    min-height: 100vh;
+    background: var(--page-bg-colour); 
+    color: var(--general-text-colour);
+    /* font-family: 'Chakra Petch', monospace; */
+}
+
+/* soft dotted grainy texture */
+.crt-grain {
+    position: absolute; 
+    inset: 0; 
+    pointer-events: none; 
+    z-index: 5;
+  
+    background-image:
+        radial-gradient(circle, var(--grain-light) 0, transparent 1.7px),
+        radial-gradient(circle, var(--grain-dark) 0, transparent 1.7px);
+    background-size: 7px 7px, 11px 11px;
+    background-position: 0 0, 3px 5px;
+    
+    animation: crt-hum 2.6s ease-in-out infinite alternate;
+}
+
+/* curved-tube edge darkening with slow pulsing brightness */
+.crt-vignette {
+    position: absolute; 
+    inset: 0; 
+    pointer-events: none; 
+    z-index: 4;
+    background: radial-gradient(ellipse at center, transparent 45%, var(--vig-edge) 100%);
+    box-shadow: inset 0 0 140px var(--vig-inset);
+    animation: crt-pulse 3.5s ease-in-out infinite;
+}
+
+/* soft rolling light band */
+.crt-roll {
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    height: 300px; 
+    pointer-events: none; 
+    z-index: 4;
+    background: linear-gradient(transparent, var(--roll), transparent);
+    animation: crt-roll 7s linear infinite;
+}
+.crt-container {
+    position: relative; 
+    z-index: 2; 
+    box-sizing: border-box;
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 28px 32px;
+}
+
+/* .crt-text-glow {
+    color: var(--heading);
+    text-shadow: -2px 0 var(--fringe-light), 2px 0 var(--fringe-shadow), var(--halo);
+    animation: crt-flicker 4s steps(1) infinite;
+} */
+
+/* CRT Animation */
+@keyframes crt-hum { 
+    from { opacity: .8 } to { opacity: 1 } 
+}
+@keyframes crt-pulse { 
+    0% { opacity: .75 } 
+    50% { opacity: 1 } 
+    100% { opacity: .75 } 
+}
+@keyframes crt-roll  { 
+    from { top: -300px } to { top: 100% } 
+}
+@keyframes crt-flicker {
+    0% { opacity: 1 } 
+    92% { opacity: var(--deep-flicker-opacity) }
+    94% { opacity: 1 } 
+    97% { opacity: var(--shallow-flicker-opacity) } 
+}
