@@ -10,6 +10,7 @@ function constructQuery(query) {
     if (query.cardNumber) searchQuery.set("cardNumber", query.cardNumber);
     if (query.cardText) searchQuery.set("cardText", query.cardText);
     if (query.cardType) searchQuery.set("cardType", query.cardType);
+    if (query.colourName) searchQuery.set("colourName", query.colourName);
     if (query.costType) searchQuery.set("costType", query.costType);
     if (query.level) searchQuery.set("level", query.level);
     if (query.page) searchQuery.set("page", query.page);

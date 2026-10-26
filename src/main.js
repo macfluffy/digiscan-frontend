@@ -4,5 +4,4 @@ import { router } from './router/index.js'
 
 import './shared/styles/global.css'
 
-
 createApp(App).use(router).mount('#app');
