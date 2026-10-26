@@ -135,11 +135,11 @@
             <input 
                 type="checkbox" 
                 class="advanced-search-checkboxes"
-                id="options"
+                id="option"
                 name="cardType" 
-                value="options" 
+                value="option" 
             />
-            <label for="options">Options</label>
+            <label for="option">Option</label>
         </fieldset>
 
         <fieldset class="flex-container flex-rows advanced-search-input" 
