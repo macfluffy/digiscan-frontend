@@ -32,6 +32,10 @@
     }
 }
 
+.colour-options {
+    text-transform: capitalize;
+}
+
 .dropdown-menu {
     cursor: pointer;
 }
