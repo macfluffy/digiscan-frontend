@@ -77,7 +77,7 @@
             <h3 class="advanced-search-label">Card Name:</h3>
             <input 
                 type="text" 
-                v-model="searchInputs.cardName"
+                
                 class="advanced-search-text-input" 
                 id="card-name-input" 
             />
@@ -108,92 +108,102 @@
         <fieldset class="flex-container flex-rows advanced-search-input" 
             id="card-type">
             <h3 class="advanced-search-label">Card Type:</h3>
-            <input 
-                type="checkbox" 
-                class="advanced-search-checkboxes"
-                id="digiegg"
-                name="cardType" 
-                value="digiegg" 
-            />
-            <label for="digi-egg">Digi-Egg</label>
-            <input 
-                type="checkbox" 
-                class="advanced-search-checkboxes"
-                id="digimon"
-                name="cardType" 
-                value="digimon" 
-            />
-            <label for="digimon">Digimon</label>
-            <input 
-                type="checkbox" 
-                class="advanced-search-checkboxes"
-                id="tamer"
-                name="cardType" 
-                value="tamer" 
-            />
-            <label for="tamer">Tamer</label>
-            <input 
-                type="checkbox" 
-                class="advanced-search-checkboxes"
-                id="option"
-                name="cardType" 
-                value="option" 
-            />
-            <label for="option">Option</label>
+            <label>
+                <input 
+                    type="checkbox" 
+                    class="advanced-search-checkboxes"
+                    name="cardType" 
+                    value="digiegg" 
+                />
+                Digi-Egg
+            </label>
+            <label>
+                <input 
+                    type="checkbox" 
+                    class="advanced-search-checkboxes"
+                    name="cardType" 
+                    value="digimon" 
+                />
+                Digimon
+            </label>
+            <label>
+                <input 
+                    type="checkbox" 
+                    class="advanced-search-checkboxes"
+                    name="cardType" 
+                    value="tamer" 
+                />
+                Tamer
+            </label>
+            <label>
+                <input 
+                    type="checkbox" 
+                    class="advanced-search-checkboxes"
+                    name="cardType" 
+                    value="option" 
+                />
+                Option
+            </label>
         </fieldset>
 
         <fieldset class="flex-container flex-rows advanced-search-input" 
             id="card-level">
             <h3 class="advanced-search-label">Card Level</h3>
             <p>Card includes:</p>
-            <input 
-                type="checkbox" 
-                class="advanced-search-checkboxes"
-                id="level-2" 
-                name="level" 
-                value="2" 
-            />
-            <label for="level-2">Level 2</label>
-            <input 
-                type="checkbox" 
-                class="advanced-search-checkboxes"
-                id="level-3" 
-                name="level" 
-                value="3" 
-            />
-            <label for="level-3">Level 3</label>
-            <input 
-                type="checkbox" 
-                class="advanced-search-checkboxes"
-                id="level-4" 
-                name="level" 
-                value="4" 
-            />
-            <label for="level-4">Level 4</label>
-            <input 
-                type="checkbox" 
-                class="advanced-search-checkboxes"
-                id="level-5" 
-                name="level" 
-                value="5" 
-            />
-            <label for="level-5">Level 5</label>
-            <input 
-                type="checkbox" 
-                class="advanced-search-checkboxes"
-                id="level-6" 
-                name="level" 
-                value="6" 
-            />
-            <label for="level-6">Level 6</label>
-            <input 
-                type="checkbox" 
-                class="advanced-search-checkboxes"
-                id="level-7" 
-                name="level" 
-                value="7" 
-            />
-            <label for="level-7">Level 7</label>
+            <label>
+                <input 
+                    type="checkbox" 
+                    class="advanced-search-checkboxes"
+                    name="level" 
+                    value="2" 
+                />
+                Level 2
+            </label>
+            <label>
+                <input 
+                    type="checkbox" 
+                    class="advanced-search-checkboxes"
+                    name="level" 
+                    value="3" 
+                />
+                Level 3
+            </label>
+            <label>
+                <input 
+                    type="checkbox" 
+                    class="advanced-search-checkboxes"
+                    name="level" 
+                    value="4" 
+                />
+                Level 4
+            </label>
+            <label>
+                <input 
+                    type="checkbox" 
+                    class="advanced-search-checkboxes"
+                    name="level" 
+                    value="5" 
+                />
+                Level 5
+            </label>
+            <label>
+                <input 
+                    type="checkbox" 
+                    class="advanced-search-checkboxes"
+                    name="level" 
+                    value="6" 
+                />
+                Level 6
+            </label>
+            <label>
+                <input 
+                    type="checkbox" 
+                    class="advanced-search-checkboxes"
+                    name="level" 
+                    value="7" 
+                />
+                Level 7
+            </label>
         </fieldset>
 
         <fieldset class="flex-container flex-rows advanced-search-input" 
@@ -205,62 +215,69 @@
                 <option value="NOT">does not contain</option>
                 <option value="OR">contains at least one</option>
             </select>
-            <input 
-                type="checkbox" 
-                class="advanced-search-checkboxes"
-                id="red" 
-                name="colourName" 
-                value="red" 
-            />
-            <label for="red">Red</label>
-            <input 
-                type="checkbox" 
-                class="advanced-search-checkboxes"
-                id="blue" 
-                name="colourName" 
-                value="blue" 
-            />
-            <label for="blue">Blue</label>
-            <input 
-                type="checkbox" 
-                class="advanced-search-checkboxes"
-                id="yellow" 
-                name="colourName" 
-                value="yellow" 
-            />
-            <label for="yellow">Yellow</label>
-            <input 
-                type="checkbox" 
-                class="advanced-search-checkboxes"
-                id="green" 
-                name="colourName" 
-                value="green" 
-            />
-            <label for="green">Green</label>
-            <input
-                type="checkbox"
-                class="advanced-search-checkboxes"
-                id="black" 
-                name="colourName" 
-                value="black" 
-            />
-            <label for="black">Black</label>
-            <input
-                type="checkbox"
-                class="advanced-search-checkboxes"
-                id="purple" 
-                name="colourName" 
-                value="purple" 
-            />
-            <label for="purple">Purple</label>
-            <input
-                type="checkbox"
-                class="advanced-search-checkboxes"
-                id="white" 
-                name="colourName" 
-                value="white" 
-            />
-            <label for="white">White</label>
+            <label>
+                <input 
+                    type="checkbox" 
+                    class="advanced-search-checkboxes"
+                    name="colourName" 
+                    value="red" 
+                />
+                Red
+            </label>
+            <label>
+                <input 
+                    type="checkbox" 
+                    class="advanced-search-checkboxes"
+                    name="colourName" 
+                    value="blue" 
+                />
+                Blue
+            </label>
+            <label>
+                <input 
+                    type="checkbox" 
+                    class="advanced-search-checkboxes"
+                    name="colourName" 
+                    value="yellow" 
+                />
+                Yellow
+            </label>
+            <label>
+                <input 
+                    type="checkbox" 
+                    class="advanced-search-checkboxes"
+                    name="colourName" 
+                    value="green" 
+                />
+                Green
+            </label>
+            <label>
+                <input
+                    type="checkbox"
+                    class="advanced-search-checkboxes"
+                    name="colourName" 
+                    value="black" 
+                />
+                Black
+            </label>
+            <label>
+                <input
+                    type="checkbox"
+                    class="advanced-search-checkboxes"
+                    name="colourName" 
+                    value="purple" 
+                />
+                Purple
+            </label>
+            <label>
+                <input
+                    type="checkbox"
+                    class="advanced-search-checkboxes"
+                    name="colourName" 
+                    value="white" 
+                />
+                White
+            </label>
         </fieldset>
 
         <fieldset class="flex-container flex-rows advanced-search-input" 
@@ -287,75 +304,83 @@
         <fieldset class="flex-container flex-rows advanced-search-input" 
             id="card-rarity">
             <h3 class="advanced-search-label">Card Rarity:</h3>
-            <input 
-                type="checkbox" 
-                class="advanced-search-checkboxes"
-                id="common" 
-                name="rarity" 
-                value="common" 
-            />
-            <label for="common">Common</label>
-            <input 
-                type="checkbox" 
-                class="advanced-search-checkboxes"
-                id="uncommon" 
-                name="rarity" 
-                value="uncommon" 
-            />
-            <label for="uncommon">Uncommon</label>
-            <input 
-                type="checkbox" 
-                class="advanced-search-checkboxes"
-                id="rare" 
-                name="rarity" 
-                value="rare" 
-            />
-            <label for="rare">Rare</label>
-            <input 
-                type="checkbox" 
-                class="advanced-search-checkboxes"
-                id="super" 
-                name="rarity" 
-                value="super" 
-            />
-            <label for="super">Super Rare</label>
-            <input
-                type="checkbox"
-                class="advanced-search-checkboxes"
-                id="ultra" 
-                name="rarity" 
-                value="ultra" 
-            />
-            <label for="ultra">Ultra Rare</label>
-            <input
-                type="checkbox"
-                class="advanced-search-checkboxes"
-                id="secret" 
-                name="rarity" 
-                value="secret" 
-            />
-            <label for="secret">Secret Rare</label>
+            <label>
+                <input 
+                    type="checkbox" 
+                    class="advanced-search-checkboxes"
+                    name="rarity" 
+                    value="common" 
+                />
+                Common
+            </label>
+            <label>
+                <input 
+                    type="checkbox" 
+                    class="advanced-search-checkboxes"
+                    name="rarity" 
+                    value="uncommon" 
+                />
+                Uncommon
+            </label>
+            <label>
+                <input 
+                    type="checkbox" 
+                    class="advanced-search-checkboxes"
+                    name="rarity" 
+                    value="rare" 
+                />
+                Rare
+            </label>
+            <label>
+                <input 
+                    type="checkbox" 
+                    class="advanced-search-checkboxes"
+                    name="rarity" 
+                    value="super" 
+                />
+                Super Rare
+            </label>
+            <label>
+                <input
+                    type="checkbox"
+                    class="advanced-search-checkboxes"
+                    name="rarity" 
+                    value="ultra" 
+                />
+                Ultra Rare
+            </label>
+            <label>
+                <input
+                    type="checkbox"
+                    class="advanced-search-checkboxes"
+                    name="rarity" 
+                    value="secret" 
+                />
+                Secret Rare
+            </label>
         </fieldset>
 
         <fieldset class="flex-container flex-rows advanced-search-input" 
             id="card-cost">
             <h3 class="advanced-search-label">Card Cost:</h3>
-            <input
-                type="checkbox"
-                class="advanced-search-checkboxes"
-                id="play-cost" 
-                name="costType" 
-                value="play-cost" 
-            />
-            <label for="play-cost">Play</label>
-            <input
-                type="checkbox"
-                class="advanced-search-checkboxes"
-                id="use-cost" 
-                name="costType" 
-                value="use-cost" 
-            />
-            <label for="use-cost">Use</label>
+            <label>
+                <input
+                    type="checkbox"
+                    class="advanced-search-checkboxes"
+                    name="costType" 
+                    value="play-cost" 
+                />
+                Play
+            </label>
+            <label>
+                <input
+                    type="checkbox"
+                    class="advanced-search-checkboxes"
+                    name="costType" 
+                    value="use-cost" 
+                />
+                Use
+            </label>
             <input 
                 type="text" 
                 class="advanced-search-text-input" 
@@ -390,22 +415,24 @@
         <fieldset class="flex-container flex-rows advanced-search-input" 
             id="art-container">
             <h3 class="advanced-search-label">Card Art:</h3>
-            <input
-                type="checkbox"
-                class="advanced-search-checkboxes"
-                id="regular-art" 
-                name="cardTreatment" 
-                value="regular-art" 
-            />
-            <label for="regular-art">Regular Art</label>
-            <input
-                type="checkbox"
-                class="advanced-search-checkboxes"
-                id="parallel-rare" 
-                name="cardTreatment" 
-                value="parallel-rare" 
-            />
-            <label for="parallel-rare">Parallel Rare</label>
+            <label>
+                <input
+                    type="checkbox"
+                    class="advanced-search-checkboxes"
+                    name="cardTreatment" 
+                    value="regular-art" 
+                />
+                Regular Art
+            </label>
+            <label>
+                <input
+                    type="checkbox"
+                    class="advanced-search-checkboxes"
+                    name="cardTreatment" 
+                    value="parallel-rare" 
+                />
+                Parallel Rare
+            </label>
         </fieldset>
 
         <button class="holographic-buttons" id="advanced-search-button">
