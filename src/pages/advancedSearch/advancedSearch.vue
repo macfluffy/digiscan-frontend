@@ -27,6 +27,43 @@
         power: ''
     });
 
+    const types = [
+        { value: 'digiegg', label: 'Digi-Egg' },
+        { value: 'digimon', label: 'Digimon' },
+        { value: 'tamer', label: 'Tamer' },
+        { value: 'option', label: 'Option' }
+    ];
+
+    const colours = [
+        'red',
+        'blue',
+        'yellow',
+        'green',
+        'black',
+        'purple',
+        'white'
+    ];
+
+    const levels = [2, 3, 4, 5, 6, 7];
+    const rarities = [
+        { value: 'common', label: 'Common' },
+        { value: 'uncommon', label: 'Uncommon' },
+        { value: 'rare', label: 'Rare' },
+        { value: 'superRare', label: 'Super Rare' },
+        { value: 'ultraRare', label: 'Ultra Rare' },
+        { value: 'secretRare', label: 'Secret Rare' },
+    ];
+
+    const cardCostTypes = [
+        { value: 'play-cost', label: 'Play'},
+        { value: 'use-cost', label: 'Use'}
+    ];
+
+    const treatments = [
+        { value:'regular-art', label: 'Regular Art'},
+        { value:'parallel-rare', label: 'Parallel Rare'}
+    ];
+
     // Construct the query object, removing empty values and placing any multiple 
     // values for the same key into an array
     function formatQuery(rawQuery) {
@@ -111,41 +148,14 @@
         <fieldset class="flex-container flex-rows advanced-search-input" 
             id="card-type">
             <h3 class="advanced-search-label">Card Type:</h3>
-            <label>
+            <label v-for="type in types" :key="type.value">
                 <input 
                     type="checkbox" 
                     class="advanced-search-checkboxes"
                     name="cardType" 
-                    value="digiegg" 
+                    :value="type.value" 
                 />
-                Digi-Egg
-            </label>
-            <label>
-                <input 
-                    type="checkbox" 
-                    class="advanced-search-checkboxes"
-                    name="cardType" 
-                    value="digimon" 
-                />
-                Digimon
-            </label>
-            <label>
-                <input 
-                    type="checkbox" 
-                    class="advanced-search-checkboxes"
-                    name="cardType" 
-                    value="tamer" 
-                />
-                Tamer
-            </label>
-            <label>
-                <input 
-                    type="checkbox" 
-                    class="advanced-search-checkboxes"
-                    name="cardType" 
-                    value="option" 
-                />
-                Option
+                {{ type.label }}
             </label>
         </fieldset>
 
@@ -153,59 +163,14 @@
             id="card-level">
             <h3 class="advanced-search-label">Card Level</h3>
             <p>Card includes:</p>
-            <label>
+            <label v-for="level in levels" :key="level">
                 <input 
                     type="checkbox" 
                     class="advanced-search-checkboxes"
                     name="level" 
-                    value="2" 
+                    :value="level" 
                 />
-                Level 2
-            </label>
-            <label>
-                <input 
-                    type="checkbox" 
-                    class="advanced-search-checkboxes"
-                    name="level" 
-                    value="3" 
-                />
-                Level 3
-            </label>
-            <label>
-                <input 
-                    type="checkbox" 
-                    class="advanced-search-checkboxes"
-                    name="level" 
-                    value="4" 
-                />
-                Level 4
-            </label>
-            <label>
-                <input 
-                    type="checkbox" 
-                    class="advanced-search-checkboxes"
-                    name="level" 
-                    value="5" 
-                />
-                Level 5
-            </label>
-            <label>
-                <input 
-                    type="checkbox" 
-                    class="advanced-search-checkboxes"
-                    name="level" 
-                    value="6" 
-                />
-                Level 6
-            </label>
-            <label>
-                <input 
-                    type="checkbox" 
-                    class="advanced-search-checkboxes"
-                    name="level" 
-                    value="7" 
-                />
-                Level 7
+                Level {{ level }}
             </label>
         </fieldset>
 
@@ -218,68 +183,14 @@
                 <option value="NOT">does not contain</option>
                 <option value="OR">contains at least one</option>
             </select>
-            <label>
-                <input 
-                    type="checkbox" 
-                    class="advanced-search-checkboxes"
-                    name="colourName" 
-                    value="red" 
-                />
-                Red
-            </label>
-            <label>
-                <input 
-                    type="checkbox" 
-                    class="advanced-search-checkboxes"
-                    name="colourName" 
-                    value="blue" 
-                />
-                Blue
-            </label>
-            <label>
-                <input 
-                    type="checkbox" 
-                    class="advanced-search-checkboxes"
-                    name="colourName" 
-                    value="yellow" 
-                />
-                Yellow
-            </label>
-            <label>
-                <input 
-                    type="checkbox" 
-                    class="advanced-search-checkboxes"
-                    name="colourName" 
-                    value="green" 
-                />
-                Green
-            </label>
-            <label>
+            <label v-for="colour in colours" :key="colour" class="colour-options">
                 <input
                     type="checkbox"
                     class="advanced-search-checkboxes"
-                    name="colourName" 
-                    value="black" 
+                    name="colourName"
+                    :value="colour"
                 />
-                Black
-            </label>
-            <label>
-                <input
-                    type="checkbox"
-                    class="advanced-search-checkboxes"
-                    name="colourName" 
-                    value="purple" 
-                />
-                Purple
-            </label>
-            <label>
-                <input
-                    type="checkbox"
-                    class="advanced-search-checkboxes"
-                    name="colourName" 
-                    value="white" 
-                />
-                White
+                {{ colour }}
             </label>
         </fieldset>
 
@@ -309,82 +220,28 @@
         <fieldset class="flex-container flex-rows advanced-search-input" 
             id="card-rarity">
             <h3 class="advanced-search-label">Card Rarity:</h3>
-            <label>
+            <label v-for="rarity in rarities" :key="rarity.value">
                 <input 
                     type="checkbox" 
                     class="advanced-search-checkboxes"
                     name="rarity" 
-                    value="common" 
+                    :value="rarity.value" 
                 />
-                Common
-            </label>
-            <label>
-                <input 
-                    type="checkbox" 
-                    class="advanced-search-checkboxes"
-                    name="rarity" 
-                    value="uncommon" 
-                />
-                Uncommon
-            </label>
-            <label>
-                <input 
-                    type="checkbox" 
-                    class="advanced-search-checkboxes"
-                    name="rarity" 
-                    value="rare" 
-                />
-                Rare
-            </label>
-            <label>
-                <input 
-                    type="checkbox" 
-                    class="advanced-search-checkboxes"
-                    name="rarity" 
-                    value="super" 
-                />
-                Super Rare
-            </label>
-            <label>
-                <input
-                    type="checkbox"
-                    class="advanced-search-checkboxes"
-                    name="rarity" 
-                    value="ultra" 
-                />
-                Ultra Rare
-            </label>
-            <label>
-                <input
-                    type="checkbox"
-                    class="advanced-search-checkboxes"
-                    name="rarity" 
-                    value="secret" 
-                />
-                Secret Rare
+                {{ rarity.label }}
             </label>
         </fieldset>
 
         <fieldset class="flex-container flex-rows advanced-search-input" 
             id="card-cost">
             <h3 class="advanced-search-label">Card Cost:</h3>
-            <label>
-                <input
-                    type="checkbox"
+            <label v-for="cardCostType in cardCostTypes" :key="cardCostType.value">
+                <input 
+                    type="checkbox" 
                     class="advanced-search-checkboxes"
                     name="costType" 
-                    value="play-cost" 
+                    :value="cardCostType.value" 
                 />
-                Play
-            </label>
-            <label>
-                <input
-                    type="checkbox"
-                    class="advanced-search-checkboxes"
-                    name="costType" 
-                    value="use-cost" 
-                />
-                Use
+                {{ cardCostType.label }}
             </label>
             <input 
                 type="text" 
@@ -420,23 +277,14 @@
         <fieldset class="flex-container flex-rows advanced-search-input" 
             id="art-container">
             <h3 class="advanced-search-label">Card Art:</h3>
-            <label>
-                <input
-                    type="checkbox"
+            <label v-for="treatment in treatments" :key="treatment.value">
+                <input 
+                    type="checkbox" 
                     class="advanced-search-checkboxes"
                     name="cardTreatment" 
-                    value="regular-art" 
+                    :value="treatment.value" 
                 />
-                Regular Art
-            </label>
-            <label>
-                <input
-                    type="checkbox"
-                    class="advanced-search-checkboxes"
-                    name="cardTreatment" 
-                    value="parallel-rare" 
-                />
-                Parallel Rare
+                {{ treatment.label }}
             </label>
         </fieldset>
 
