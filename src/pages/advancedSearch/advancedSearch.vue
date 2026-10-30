@@ -77,8 +77,9 @@
             <h3 class="advanced-search-label">Card Name:</h3>
             <input 
                 type="text" 
-                
+                v-model="searchInputs.cardName"
                 class="advanced-search-text-input" 
+                name="cardName"
                 id="card-name-input" 
             />
         </fieldset>
@@ -90,6 +91,7 @@
                 type="text" 
                 v-model="searchInputs.cardText"
                 class="advanced-search-text-input" 
+                name="cardText"
                 id="card-text-input" 
             />
         </fieldset>
@@ -101,6 +103,7 @@
                 type="text" 
                 v-model="searchInputs.inheritable"
                 class="advanced-search-text-input" 
+                name="inheritable"
                 id="inheritable-effects-input" 
             />
         </fieldset>
@@ -287,6 +290,7 @@
                 type="text" 
                 v-model="searchInputs.setNumber"
                 class="advanced-search-text-input" 
+                name="cardSet"
                 id="card-set-input" 
             />
         </fieldset>
@@ -297,6 +301,7 @@
             <input 
                 type="text" 
                 class="advanced-search-text-input" 
+                name="blockNumber"
                 id="block-input" 
             />
         </fieldset>
@@ -384,8 +389,8 @@
             <input 
                 type="text" 
                 class="advanced-search-text-input" 
-                id="cost-input" 
                 name="cardCost"
+                id="cost-input" 
             />
         </fieldset>
 
@@ -406,8 +411,8 @@
                 type="text" 
                 v-model="searchInputs.power"
                 class="advanced-search-text-input" 
-                id="power-input" 
                 name="power"
+                id="power-input" 
             />
             <p>DP</p>
         </fieldset>   
