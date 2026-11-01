@@ -51,8 +51,22 @@
             </section>
 
             <section id="card-details">
-                <p class="capitalise" id="cardname">{{ card.cardName }}</p>
-
+                <h1 class="capitalise" id="cardname">{{ card.cardName }}</h1>
+                <section class="colour-wheel">
+                    <p 
+                    v-for="colour in colours"
+                    class="detail-heading">
+                            Colours
+                    </p>
+                    <p class="capitalise detail-text">
+                        {{ 
+                            card.colours
+                            .map(colour => colour.colourName)
+                            .join(', ') 
+                        }}
+                    </p>
+                </section>
+                
                 <section class="tag-container">
                     <span 
                         v-if="card.card_types" 
@@ -67,48 +81,57 @@
                             {{ trait.cardTrait }}
                     </span>
                 </section>
-                
-                <section class="grid">
-                    <template v-if="card.level">
-                        <p class="detail-heading">Level</p>
-                        <p class="detail-text">{{ card.level }}</p>
-                    </template>
+                <section>
+                    <div class="card-stats-container">
+                        <section 
+                            v-if="card.level" 
+                            class="holo card-stats-window">
+                                <div class="card-stats-title">Level</div>
+                                <div class="card-stats-digits">{{ card.level }}</div>
+                        </section>
 
+                        <section 
+                            v-if="card.card_costs" 
+                            v-for="cost in card.card_costs"
+                            class="holo card-stats-window">
+                                <div class="card-stats-title">{{ cost.costType }} Cost</div> 
+                                <div class="card-stats-digits">{{ cost.CardCostings.cardCost }}</div>
+                        </section> 
+
+                        <section 
+                            v-if="card.power"
+                            class="holo card-stats-window"
+                            id="stats-power">
+                                <div class="card-stats-title">Power</div> 
+                                <div class="card-stats-digits">{{ card.power }} DP</div>
+                        </section>                 
+                    </div>
                     
-                    
-                    <template v-if="card.cardText">
-                        <p class="detail-heading">Effects</p>
-                        <p class="detail-text">{{ card.cardText }}</p>
-                    </template>
+                    <div class="effects-container">
+                        <section v-if="card.cardText" class="holo effects">
+                            <h4>Effects</h4>
+                            <p>{{ card.cardText }}</p>
+                        </section>
 
-                    <template v-if="card.inheritable">
-                        <p class="detail-heading">Inherited Effect</p> 
-                        <p class="detail-text">{{ card.inheritable }}</p>
-                    </template>
-                    
-                    <template v-if="card.card_costs" 
-                        v-for="cost in card.card_costs">
-                        <p class="detail-heading capitalise">{{ cost.costType }} Cost</p> 
-                        <p class="detail-text">{{ cost.CardCostings.cardCost }}</p>
-                    </template>
-
-                    <template v-if="card.power">
-                        <p class="detail-heading">Power</p> 
-                        <p class="detail-text">{{ card.power }} DP</p>
-                    </template>
-
-                    <p class="detail-heading">
-                        Colours
-                    </p>
-                    <p class="capitalise detail-text">
-                        {{ 
-                            card.colours
-                            .map(colour => colour.colourName)
-                            .join(', ') 
-                        }}
-                    </p>
-
-                    
+                        <section v-if="card.inheritable" class="holo effects">
+                            <h4>Inherited Effect</h4> 
+                            <p>{{ card.inheritable }}</p>
+                        </section>
+                    </div>
+                    <section>
+                        <div>
+                            <h5>Set</h5>
+                            <p>{{ card.card_sets[0].setNumber }} {{ card.card_sets[0].setName }}</p>
+                        </div>
+                        <div>
+                            <h5>Artist</h5>
+                            <p>Artist's Name</p>
+                        </div>
+                    </section>
+                    <section>
+                        <h5>Notes & Rulings:</h5>
+                        <p>Notes and notes and notes</p>
+                    </section>
                 </section>
             </section>
         </section>
