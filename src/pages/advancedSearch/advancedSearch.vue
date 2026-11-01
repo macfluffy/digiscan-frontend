@@ -105,7 +105,7 @@
 </script>
 
 <template>
-    <form class="flex-container flex-columns wrapper-container" 
+    <form class="flex-container flex-columns" 
         id="advanced-search-page-container" 
         @submit.prevent="submitAdvancedSearch">
 
