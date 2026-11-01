@@ -53,14 +53,20 @@
             <section id="card-details">
                 <p class="capitalise" id="cardname">{{ card.cardName }}</p>
 
-                <div class="tag-container">
+                <section class="tag-container">
+                    <span 
+                        v-if="card.card_types" 
+                        v-for="type in card.card_types"
+                        class="trait-tags card-types capitalise">
+                            {{ type.cardType }}
+                    </span>
                     <span 
                         v-if="card.card_traits" 
                         v-for="trait in card.card_traits"
-                        class="trait-tags">
+                        class="trait-tags capitalise">
                             {{ trait.cardTrait }}
                     </span>
-                </div>
+                </section>
                 
                 <section class="grid">
                     <template v-if="card.level">
@@ -68,14 +74,7 @@
                         <p class="detail-text">{{ card.level }}</p>
                     </template>
 
-                    <p class="detail-heading">Type</p>
-                    <p class="capitalise detail-text">
-                        {{ 
-                            card.card_types
-                            .map(type => type.cardType)
-                            .join(', ') 
-                        }}
-                    </p>
+                    
                     
                     <template v-if="card.cardText">
                         <p class="detail-heading">Effects</p>
