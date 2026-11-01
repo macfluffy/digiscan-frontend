@@ -43,66 +43,74 @@
             :src="api.getCardImageURL(card.cardNumber)"
             :alt="card.cardName" />
 
-        <section id="card-details">
-            <p class="capitalise" id="cardname">{{ card.cardName }}</p>
-            
-            <section class="grid">
-                <template v-if="card.level">
-                    <p class="detail-heading">Level</p>
-                    <p class="detail-text">{{ card.level }}</p>
-                </template>
+        <section class="card-display-window">
+            <section class="card-display-titlebar">
+                <span v-if="card.card_sets">
+                    &#9632; &#9632; &#9632; &nbsp; {{ card.card_sets[0].setNumber }} / {{ card.cardNumber }}
+                </span>
+            </section>
 
-                <p class="detail-heading">Type</p>
-                <p class="capitalise detail-text">
-                    {{ 
-                        card.card_types
-                        .map(type => type.cardType)
-                        .join(', ') 
-                    }}
-                </p>
+            <section id="card-details">
+                <p class="capitalise" id="cardname">{{ card.cardName }}</p>
+
+                <div class="tag-container">
+                    <span 
+                        v-if="card.card_traits" 
+                        v-for="trait in card.card_traits"
+                        class="trait-tags">
+                            {{ trait.cardTrait }}
+                    </span>
+                </div>
                 
-                <template v-if="card.cardText">
-                    <p class="detail-heading">Effects</p>
-                    <p class="detail-text">{{ card.cardText }}</p>
-                </template>
+                <section class="grid">
+                    <template v-if="card.level">
+                        <p class="detail-heading">Level</p>
+                        <p class="detail-text">{{ card.level }}</p>
+                    </template>
 
-                <template v-if="card.inheritable">
-                    <p class="detail-heading">Inherited Effect</p> 
-                    <p class="detail-text">{{ card.inheritable }}</p>
-                </template>
-                
-                <template v-if="card.card_costs" 
-                    v-for="cost in card.card_costs">
-                    <p class="detail-heading capitalise">{{ cost.costType }} Cost</p> 
-                    <p class="detail-text">{{ cost.CardCostings.cardCost }}</p>
-                </template>
-
-                <template v-if="card.power">
-                    <p class="detail-heading">Power</p> 
-                    <p class="detail-text">{{ card.power }} DP</p>
-                </template>
-
-                <p class="detail-heading">
-                    Colours
-                </p>
-                <p class="capitalise detail-text">
-                    {{ 
-                        card.colours
-                        .map(colour => colour.colourName)
-                        .join(', ') 
-                    }}
-                </p>
-
-                <template v-if="card.card_traits">
-                    <p class="detail-heading">Traits</p>
-                    <p class="detail-text">
+                    <p class="detail-heading">Type</p>
+                    <p class="capitalise detail-text">
                         {{ 
-                            card.card_traits
-                            .map(trait => trait.cardTrait)
+                            card.card_types
+                            .map(type => type.cardType)
                             .join(', ') 
                         }}
                     </p>
-                </template>
+                    
+                    <template v-if="card.cardText">
+                        <p class="detail-heading">Effects</p>
+                        <p class="detail-text">{{ card.cardText }}</p>
+                    </template>
+
+                    <template v-if="card.inheritable">
+                        <p class="detail-heading">Inherited Effect</p> 
+                        <p class="detail-text">{{ card.inheritable }}</p>
+                    </template>
+                    
+                    <template v-if="card.card_costs" 
+                        v-for="cost in card.card_costs">
+                        <p class="detail-heading capitalise">{{ cost.costType }} Cost</p> 
+                        <p class="detail-text">{{ cost.CardCostings.cardCost }}</p>
+                    </template>
+
+                    <template v-if="card.power">
+                        <p class="detail-heading">Power</p> 
+                        <p class="detail-text">{{ card.power }} DP</p>
+                    </template>
+
+                    <p class="detail-heading">
+                        Colours
+                    </p>
+                    <p class="capitalise detail-text">
+                        {{ 
+                            card.colours
+                            .map(colour => colour.colourName)
+                            .join(', ') 
+                        }}
+                    </p>
+
+                    
+                </section>
             </section>
         </section>
 

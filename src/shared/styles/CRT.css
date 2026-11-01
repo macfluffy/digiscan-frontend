@@ -2,12 +2,15 @@
    Usage: put data-theme="mid-dark" or data-theme="mid-light" on .crt-page.
    ========================================================================== */
 
-@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600&family=VT323&display=swap");
+/* Styled Components */
+@import "../components/crtTheme/holographicButton/holographicButton.css";
 
 /* ---------- THEME ---------- */
 .crt-theme {
     --dimmer-flicker-opacity: .85;  
     --dim-flicker-opacity: .92;
+    --card-font: 400 2rem 'Michroma', sans-serif;
+    --panel-text: #fff;
     
     &[data-theme = "dark"] {
         --body-bg-colour: #0b2160;
@@ -24,6 +27,19 @@
         --fringe-light: rgba(94,231,255,.85);  
         --fringe-shadow: rgba(0,30,190,.9);
         --halo: 0 0 14px rgba(94,231,255,.7);
+
+        --holo-bracket:#9ff2ff;
+        --holo-border: rgba(94, 231, 255, .45);
+        --holo-fill: linear-gradient(
+            135deg, 
+            rgba(47, 123, 255, .22), 
+            rgba(94, 231, 255, .07) 55%, 
+            rgba(47, 123, 255, .18));
+        --holo-glow: 
+            0 0 22px rgba(94, 231, 255, .28), 
+            inset 0 0 26px rgba(94, 231, 255, .12);
+
+        --holo-tag-glow: 0 0 10px rgba(94, 231, 255, .25);
     }
 
     &[data-theme = "light"] {
@@ -41,17 +57,50 @@
         --fringe-light: rgba(255, 255, 255, .9);  
         --fringe-shadow: rgba(30, 80, 220, .45);
         --halo: 0 0 14px rgba(47, 123, 255, .45);
+
+        --holo-bracket: #0b4fd6;
+        --holo-border: rgba(11, 79, 214, .55);
+        --holo-fill: linear-gradient(
+            135deg, 
+            rgba(255, 255, 255, .8), 
+            rgba(210, 227, 255, .55) 55%, 
+            rgba(255, 255, 255, .7));
+        --holo-glow: 
+            0 0 22px rgba(47, 123, 255, .35), 
+            inset 0 0 26px rgba(255, 255, 255, .7);
+
+        --holo-tag-glow: 0 0 10px rgba(47, 123, 255, .3);
     }
 }
 
 /* ---------- PAGE CRT OVERLAYS ---------- */
 .crt-page {
+    --holo-brackets:
+        linear-gradient(var(--holo-bracket), var(--holo-bracket)) 0 0/14px 2px no-repeat,
+        linear-gradient(var(--holo-bracket), var(--holo-bracket)) 0 0/2px 14px no-repeat,
+        linear-gradient(var(--holo-bracket), var(--holo-bracket)) 100% 0/14px 2px no-repeat,
+        linear-gradient(var(--holo-bracket), var(--holo-bracket)) 100% 0/2px 14px no-repeat,
+        linear-gradient(var(--holo-bracket), var(--holo-bracket)) 0 100%/14px 2px no-repeat,
+        linear-gradient(var(--holo-bracket), var(--holo-bracket)) 100% 100%/14px 2px no-repeat,
+        linear-gradient(var(--holo-bracket), var(--holo-bracket)) 0 100%/2px 14px no-repeat,
+        linear-gradient(var(--holo-bracket), var(--holo-bracket)) 100% 100%/2px 14px no-repeat;
+
+    --holo-btn-brackets:
+        linear-gradient(var(--holo-btn-bracket), var(--holo-btn-bracket)) 0 0/10px 2px no-repeat,
+        linear-gradient(var(--holo-btn-bracket), var(--holo-btn-bracket)) 0 0/2px 10px no-repeat,
+        linear-gradient(var(--holo-btn-bracket), var(--holo-btn-bracket)) 100% 0/10px 2px no-repeat,
+        linear-gradient(var(--holo-btn-bracket), var(--holo-btn-bracket)) 100% 0/2px 10px no-repeat,
+        linear-gradient(var(--holo-btn-bracket), var(--holo-btn-bracket)) 0 100%/10px 2px no-repeat,
+        linear-gradient(var(--holo-btn-bracket), var(--holo-btn-bracket)) 100% 100%/10px 2px no-repeat,
+        linear-gradient(var(--holo-btn-bracket), var(--holo-btn-bracket)) 0 100%/2px 10px no-repeat,
+        linear-gradient(var(--holo-btn-bracket), var(--holo-btn-bracket)) 100% 100%/2px 10px no-repeat;
+    
     position: relative; 
     overflow: hidden; 
     min-height: 100vh;
     background: var(--page-bg-colour); 
     color: var(--general-text-colour);
-    /* font-family: 'Chakra Petch', monospace; */
+    /* font-family: 'Chakra Petch', monospace; */    
 }
 
 /* soft dotted grainy texture */
