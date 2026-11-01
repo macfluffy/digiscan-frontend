@@ -1,5 +1,10 @@
 @import "../../shared/styles/CRT.css";
 
+.card-showcase {
+    max-width: 20rem;
+    margin: 10px;
+}
+
 .capitalise {
     text-transform: capitalize;
 }
@@ -18,9 +23,19 @@
     box-shadow: var(--holo-glow);
 }
 
-.card-showcase {
-    max-width: 20rem;
-    margin: 10px;
+.card-display-titlebar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 12px;
+    padding: 10px 16px;
+    border-bottom: 1px solid var(--holo-border);
+
+    background: color-mix(in srgb, var(--holo-edge) 10%, transparent);
+    color: var(--panel-accent);
+
+    letter-spacing: .1em;
 }
 
 .tag-container {
@@ -39,6 +54,64 @@
     
     border: 1px solid var(--holo-border);
     box-shadow: var(--holo-tag-glow);
+}
+
+.effects-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 14px;
+    margin-top: 14px;
+}
+
+.effects {
+    flex: 1 1 220px;
+    padding: 14px 16px;
+
+    h4 {
+        margin: 0 0 6px;
+        font: 22px 'Geo', sans-serif;
+        letter-spacing: .08em;
+        color: var(--panel-accent);
+    }
+
+    p {
+        margin: 0;
+        font: 400 15px/1.5 'Geo', sans-serif;
+        color: var(--panel-text);
+    }
+}
+
+.card-stats-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 14px;
+    margin: 16px 0 4px;
+}
+
+.card-stats-window {
+    flex: 1 1 0;
+    padding: 12px 14px;
+
+    &#stats-power {
+        flex-grow: 2;
+    }
+}
+
+.card-stats-title {
+    font: 20px 'VT323', monospace;
+    letter-spacing: .1em;
+    color: var(--panel-muted);
+}
+
+.card-stats-digits {
+    font: 52px/1.05 'VT323', monospace;
+    font-variant-numeric: tabular-nums;
+    
+    .dim { 
+        opacity: .28;
+    }
 }
 
 #card-details {

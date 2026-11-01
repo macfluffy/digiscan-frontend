@@ -28,6 +28,7 @@
         --fringe-shadow: rgba(0,30,190,.9);
         --halo: 0 0 14px rgba(94,231,255,.7);
 
+        --holo-edge: #5ee7ff;
         --holo-bracket:#9ff2ff;
         --holo-border: rgba(94, 231, 255, .45);
         --holo-fill: linear-gradient(
@@ -38,6 +39,9 @@
         --holo-glow: 
             0 0 22px rgba(94, 231, 255, .28), 
             inset 0 0 26px rgba(94, 231, 255, .12);
+
+        --panel-accent: #5ee7ff;
+        --panel-muted: #b6d0f5;
 
         --holo-tag-glow: 0 0 10px rgba(94, 231, 255, .25);
     }
@@ -58,6 +62,7 @@
         --fringe-shadow: rgba(30, 80, 220, .45);
         --halo: 0 0 14px rgba(47, 123, 255, .45);
 
+        --holo-edge: #0b4fd6;
         --holo-bracket: #0b4fd6;
         --holo-border: rgba(11, 79, 214, .55);
         --holo-fill: linear-gradient(
@@ -68,6 +73,9 @@
         --holo-glow: 
             0 0 22px rgba(47, 123, 255, .35), 
             inset 0 0 26px rgba(255, 255, 255, .7);
+        
+        --panel-accent: #0b3fb8;
+        --panel-muted: #2a4a85;
 
         --holo-tag-glow: 0 0 10px rgba(47, 123, 255, .3);
     }
@@ -156,6 +164,28 @@
     animation: crt-flicker 4s steps(1) infinite;
 } */
 
+.holo {
+    position: relative;
+    overflow: hidden;
+    
+    background: var(--holo-brackets), var(--holo-fill);
+    backdrop-filter: blur(6px);
+
+    border: 1px solid var(--holo-border);
+    box-shadow: var(--holo-glow);
+
+    /* slow diagonal light sweep */
+    &:before {
+        content:"";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: linear-gradient(115deg, transparent 35%, var(--holo-sheen) 50%, transparent 65%);
+        background-size: 300% 100%;
+        animation: crt-holo-sheen 7s ease-in-out infinite;
+    }
+}
+
 /* CRT Animation */
 @keyframes crt-hum { 
     from { opacity: .8 } to { opacity: 1 } 
@@ -173,4 +203,8 @@
     92% { opacity: var(--deep-flicker-opacity) }
     94% { opacity: 1 } 
     97% { opacity: var(--shallow-flicker-opacity) } 
+}
+
+@keyframes crt-holo-sheen { 
+    from{ background-position: 150% 0 } to { background-position: -50% 0 } 
 }
