@@ -2,6 +2,8 @@
    Usage: put data-theme="mid-dark" or data-theme="mid-light" on .crt-page.
    ========================================================================== */
 
+@import url('https://fonts.googleapis.com/css2?family=Geo:ital@0;1&family=Michroma&family=VT323&display=swap');
+
 /* Styled Components */
 @import "../components/crtTheme/holographicButton/holographicButton.css";
 
