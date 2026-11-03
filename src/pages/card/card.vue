@@ -44,7 +44,8 @@
         <img class="card-showcase" 
             :src="api.getCardImageURL(card.cardNumber)"
             :alt="card.cardName" />
-
+        
+        
         <section class="card-display-window">
             <section class="card-display-titlebar">
                 <span v-if="card.card_sets">
@@ -118,18 +119,42 @@
                             <h4>Artist</h4>
                             <p>Artist's Name</p>
                         </div>
+                        <div>
+                            <h4>Rarity</h4>
+                            <p class="capitalise">{{ card.rarity }}</p>
+                        </div>
+                        <div>
+                            <h4>Source</h4>
+                            <p class="capitalise">Which product or event or promo did this come from?</p>
+                        </div>
                     </section>
                     <section class="card-rulings">
                         <h4>Notes & Rulings:</h4>
                         <p>Notes and notes and notes</p>
                     </section>
+                    <section id="all-card-printing-details">
+                        <div>
+                            <h4>All Versions</h4>
+                            <span>EN</span> <span>JP</span>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Prints</th>
+                                        <th>Source</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr v-for="set in card.card_sets">
+                                        <td>{{ set.setNumber }} {{ set.setName }}</td>
+                                        <td>{{ set.setNumber }} {{ set.setName }}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p>View All Prints -></p>
+                        </div>
+                    </section>
                 </section>
-            </section>
-        </section>
-
-        <section id="all-card-printing-details">
-            <p v-for="set in card.card_sets">{{ set.setNumber }} {{ set.setName }}</p>
-            <p class="capitalise">{{ card.cardNumber }} {{ card.rarity }}</p>            
+            </section>   
         </section>
     </div>
 </template>

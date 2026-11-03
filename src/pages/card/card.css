@@ -174,9 +174,7 @@
 
 #all-card-printing-details {
     align-self: flex-start;
-    background-color: var(--steel-blue);
-    margin-top: 30px;
-    padding: 20px;
+    padding: 10px;
 
     p {
         padding: 5px;
