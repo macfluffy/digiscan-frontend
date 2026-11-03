@@ -1,4 +1,5 @@
 @import "../../shared/styles/CRT.css";
+@import "../../shared/components/crtTheme/displayWindow/displayWindow.css";
 
 .card-display {
     align-items: flex-start;
@@ -14,15 +15,9 @@
     --effect-title-font: 22px 'Geo', sans-serif;
 
     flex: 1 1 440px;
+    
     min-width: 300px;
-
     margin-top: 20px;
-    
-    backdrop-filter: blur(6px);
-    background: var(--holo-brackets), var(--holo-fill);
-    
-    border: 1px solid var(--holo-border);
-    box-shadow: var(--holo-glow);
 
     h4 {
         margin: 0 0 6px;

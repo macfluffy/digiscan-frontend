@@ -46,7 +46,7 @@
             :alt="card.cardName" />
         
         
-        <section class="card-display-window">
+        <section class="holo-display-window card-display-window">
             <section class="card-display-titlebar">
                 <span v-if="card.card_sets">
                     &#9632; &#9632; &#9632; &nbsp; {{ card.card_sets[0].setNumber }} / {{ card.cardNumber }}

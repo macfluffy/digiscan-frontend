@@ -1,0 +1,9 @@
+@import "../../../styles/CRT.css";
+
+.holo-display-window {
+    backdrop-filter: blur(6px);
+    background: var(--holo-brackets), var(--holo-fill);
+    
+    border: 1px solid var(--holo-border);
+    box-shadow: var(--holo-glow);
+}
