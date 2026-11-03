@@ -1,0 +1,43 @@
+.colour-bar {
+    display: flex;
+    gap: 3px;
+}
+
+.colour-segment {
+    --segment-glow-colour: 255, 255, 255;
+    --segment-text: var(--panel-text);
+    --unlit: 0.5;
+    
+    display: grid;
+    place-items: center;
+    
+    width: 26px;
+    height: 24px;
+    
+    font: 16px 'VT323', monospace;
+    color: var(--segment-text);
+    
+    border: 1px solid rgba(var(--segment-glow-colour), .3);
+    background: rgba(var(--segment-glow-colour), .05);
+    opacity: var(--unlit);
+}
+
+.colour-segment.is-lit {
+    --segment-text: #04102e;
+    
+    text-shadow:none;
+
+    background: rgb(var(--segment-glow-colour));
+    border-color: rgba(255, 255, 255, .9);
+    box-shadow: 0 0 14px rgba(var(--segment-glow-colour), .85);
+    
+    opacity: 1;
+}
+
+.colour-segment-red { --segment-glow-colour: 255, 70, 110; }
+.colour-segment-blue { --segment-glow-colour: 70, 150, 255; }
+.colour-segment-yellow { --segment-glow-colour: 255, 214, 90; }
+.colour-segment-green { --segment-glow-colour: 60, 255, 160; }
+.colour-segment-black { --segment-glow-colour: 140, 150, 190; }
+.colour-segment-purple { --segment-glow-colour: 176, 110, 255; }
+.colour-segment-white { --segment-glow-colour: 235, 248, 255; }

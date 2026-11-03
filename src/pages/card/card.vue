@@ -3,6 +3,8 @@
     import { useRoute } from 'vue-router';
 
     import { api } from '../../api/api.js';
+    
+    import ColourBar from './colourBar/colourBar.vue';
 
     const route = useRoute();
 
@@ -51,20 +53,10 @@
             </section>
 
             <section id="card-details">
-                <h1 class="capitalise" id="cardname">{{ card.cardName }}</h1>
-                <section class="colour-wheel">
-                    <p 
-                    v-for="colour in colours"
-                    class="detail-heading">
-                            Colours
-                    </p>
-                    <p class="capitalise detail-text">
-                        {{ 
-                            card.colours
-                            .map(colour => colour.colourName)
-                            .join(', ') 
-                        }}
-                    </p>
+                
+                <section class="card-header">
+                    <h1 class="capitalise" id="cardname">{{ card.cardName }}</h1>
+                    <ColourBar v-if="card.colours" :colours="card.colours" />
                 </section>
                 
                 <section class="tag-container">
