@@ -86,7 +86,7 @@
                             v-if="card.card_costs" 
                             v-for="cost in card.card_costs"
                             class="holo card-stats-window">
-                                <div class="card-stats-title">{{ cost.costType }} Cost</div> 
+                                <div class="card-stats-title capitalise">{{ cost.costType }} Cost</div> 
                                 <div class="card-stats-digits">{{ cost.CardCostings.cardCost }}</div>
                         </section> 
 
