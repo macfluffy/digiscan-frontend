@@ -36,7 +36,7 @@
 
 <template>
     <div v-if="isLoading">Loading...</div>
-    <div class="flex-container flex-columns" 
+    <div class="flex-container flex-columns card-display" 
         v-else-if="results"
         v-for="card in results"
         :key = "card.id">
@@ -53,7 +53,6 @@
             </section>
 
             <section id="card-details">
-                
                 <section class="card-header">
                     <h1 class="capitalise" id="cardname">{{ card.cardName }}</h1>
                     <ColourBar v-if="card.colours" :colours="card.colours" />
@@ -110,25 +109,25 @@
                             <p>{{ card.inheritable }}</p>
                         </section>
                     </div>
-                    <section>
+                    <section class="card-printing-details">
                         <div>
-                            <h5>Set</h5>
+                            <h4>Set</h4>
                             <p>{{ card.card_sets[0].setNumber }} {{ card.card_sets[0].setName }}</p>
                         </div>
                         <div>
-                            <h5>Artist</h5>
+                            <h4>Artist</h4>
                             <p>Artist's Name</p>
                         </div>
                     </section>
-                    <section>
-                        <h5>Notes & Rulings:</h5>
+                    <section class="card-rulings">
+                        <h4>Notes & Rulings:</h4>
                         <p>Notes and notes and notes</p>
                     </section>
                 </section>
             </section>
         </section>
 
-        <section id="card-printing-details">
+        <section id="all-card-printing-details">
             <p v-for="set in card.card_sets">{{ set.setNumber }} {{ set.setName }}</p>
             <p class="capitalise">{{ card.cardNumber }} {{ card.rarity }}</p>            
         </section>

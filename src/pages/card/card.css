@@ -1,22 +1,39 @@
 @import "../../shared/styles/CRT.css";
 
+.card-display {
+    align-items: flex-start;
+}
+
 .card-showcase {
     max-width: 20rem;
     margin: 10px;
+    margin-top: 20px;
 }
 
 .card-display-window {
+    --effect-title-font: 22px 'Geo', sans-serif;
+
     flex: 1 1 440px;
-    
     min-width: 300px;
-    position: relative;
-    overflow: hidden;
+
+    margin-top: 20px;
     
     backdrop-filter: blur(6px);
     background: var(--holo-brackets), var(--holo-fill);
     
     border: 1px solid var(--holo-border);
     box-shadow: var(--holo-glow);
+
+    h4 {
+        margin: 0 0 6px;
+        font: var(--effect-title-font);
+        letter-spacing: .08em;
+        color: var(--panel-accent);
+    }
+
+    p {
+        font-family: var(--card-detail-font-family);
+    }
 }
 
 .card-display-titlebar{
@@ -32,6 +49,10 @@
     color: var(--panel-accent);
 
     letter-spacing: .1em;
+
+    span {
+        font-family: var(--card-detail-font-family);
+    }
 }
 
 .card-header {
@@ -72,21 +93,12 @@
 }
 
 .effects {
-    --effect-title-font: 22px 'Geo', sans-serif;
-
     flex: 1 1 220px;
     padding: 14px 16px;
 
-    h4 {
-        margin: 0 0 6px;
-        font: var(--effect-title-font);
-        letter-spacing: .08em;
-        color: var(--panel-accent);
-    }
-
     p {
         margin: 0;
-        font: 12px var(--card-detail-font-family);
+        font-size: 14px;
         line-height: 1.5;
         color: var(--panel-text);
     }
@@ -139,19 +151,36 @@
     }
 }
 
-#cardname {
-    font-size: 1.5rem;
+.card-printing-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+
+    margin-top: 25px;
+    padding-inline-start: 5px;
 }
 
-#card-printing-details {
+.card-rulings {
+    margin-top: 25px;
+    padding-inline-start: 5px;
+}
+
+#cardname {
+    font-size: 2rem;
+    font-family: var(--card-detail-font-family);
+    color: var(--panel-text);
+    line-height: 0.8;
+}
+
+#all-card-printing-details {
     align-self: flex-start;
     background-color: var(--steel-blue);
     margin-top: 30px;
     padding: 20px;
-}
 
-p {
-    padding: 5px;
+    p {
+        padding: 5px;
+    }
 }
 
 .detail-heading {
