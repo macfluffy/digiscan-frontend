@@ -5,10 +5,6 @@
     margin: 10px;
 }
 
-.capitalise {
-    text-transform: capitalize;
-}
-
 .card-display-window {
     flex: 1 1 440px;
     
@@ -63,6 +59,8 @@
     
     border: 1px solid var(--holo-border);
     box-shadow: var(--holo-tag-glow);
+
+    font-family: var(--card-detail-font-family);
 }
 
 .effects-container {
@@ -74,19 +72,22 @@
 }
 
 .effects {
+    --effect-title-font: 22px 'Geo', sans-serif;
+
     flex: 1 1 220px;
     padding: 14px 16px;
 
     h4 {
         margin: 0 0 6px;
-        font: 22px 'Geo', sans-serif;
+        font: var(--effect-title-font);
         letter-spacing: .08em;
         color: var(--panel-accent);
     }
 
     p {
         margin: 0;
-        font: 400 15px/1.5 'Geo', sans-serif;
+        font: 12px var(--card-detail-font-family);
+        line-height: 1.5;
         color: var(--panel-text);
     }
 }
@@ -109,17 +110,22 @@
 }
 
 .card-stats-title {
-    font: 20px 'VT323', monospace;
+    font: 20px var(--lcd-font-family);
     letter-spacing: .1em;
     color: var(--panel-muted);
 }
 
 .card-stats-digits {
-    font: 52px/1.05 'VT323', monospace;
+    font: 52px var(--lcd-font-family);
+    line-height: 1.05;
     font-variant-numeric: tabular-nums;
     
     .dim { 
         opacity: .28;
+    }
+
+    #dp-label{
+        font: 30px var(--lcd-font-family);
     }
 }
 
@@ -150,7 +156,6 @@ p {
 
 .detail-heading {
     font-weight: bold;
-    /* color: var(--steel-blue); */
     background-color: var(--purple);
     padding: 5px;
 }

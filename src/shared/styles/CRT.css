@@ -2,7 +2,7 @@
    Usage: put data-theme="mid-dark" or data-theme="mid-light" on .crt-page.
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Geo:ital@0;1&family=Michroma&family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geo:ital@0;1&family=Play:wght@400;700&family=VT323&display=swap');
 
 /* Styled Components */
 @import "../components/crtTheme/holographicButton/holographicButton.css";
@@ -12,6 +12,8 @@
     --dimmer-flicker-opacity: .85;  
     --dim-flicker-opacity: .92;
     --card-font: 400 2rem 'Michroma', sans-serif;
+    --lcd-font-family: 'VT323', monospace;
+    --card-detail-font-family: 'Play', sans-serif;
     --panel-text: #fff;
     
     &[data-theme = "dark"] {

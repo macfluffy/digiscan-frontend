@@ -95,7 +95,7 @@
                             class="holo card-stats-window"
                             id="stats-power">
                                 <div class="card-stats-title">Power</div> 
-                                <div class="card-stats-digits">{{ card.power }} DP</div>
+                                <div class="card-stats-digits">{{ card.power }} <span id="dp-label">DP</span></div>
                         </section>                 
                     </div>
                     

@@ -14,7 +14,7 @@
     width: 26px;
     height: 24px;
     
-    font: 16px 'VT323', monospace;
+    font: 16px var(--lcd-font-family);
     color: var(--segment-text);
     
     border: 1px solid rgba(var(--segment-glow-colour), .3);
