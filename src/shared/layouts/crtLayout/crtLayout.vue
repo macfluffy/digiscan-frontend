@@ -9,4 +9,4 @@
     </div>
 </template>
 
-<style scoped src="../../styles/CRT.css"></style>
+<style src="../../styles/CRT/CRT.css"></style>

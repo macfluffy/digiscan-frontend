@@ -5,7 +5,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Geo:ital@0;1&family=Play:wght@400;700&family=VT323&display=swap');
 
 /* Styled Components */
-@import "../components/crtTheme/holographicButton/holographicButton.css";
+@import "./displayWindow.css";
+@import "./holographicButton.css";
 
 /* ---------- THEME ---------- */
 .crt-theme {
@@ -48,6 +49,18 @@
         --panel-muted: #b6d0f5;
 
         --holo-tag-glow: 0 0 10px rgba(94, 231, 255, .25);
+
+         --holo-button-border: #9ff2ff;
+        --holo-button-glow: 
+            0 0 22px rgba(94, 231, 255, .55), 
+            inset 0 0 18px rgba(94, 231, 255, .25);
+        --holo-button-text: #fff;
+        --holo-button-bracket: #eaffff;
+        --holo-button-fill: linear-gradient(
+            135deg, 
+            rgba(94, 231, 255, .32), 
+            rgba(47, 123, 255, .24)
+        );
     }
 
     &[data-theme = "light"] {
@@ -82,6 +95,18 @@
         --panel-muted: #2a4a85;
 
         --holo-tag-glow: 0 0 10px rgba(47, 123, 255, .3);
+
+        --holo-button-border: rgba(255,255,255,.85);
+        --holo-button-glow: 
+            0 0 22px rgba(47, 123, 255, .6), 
+            inset 0 0 14px rgba(255, 255, 255, .35);
+        --holo-button-text: #07163a;
+        --holo-button-bracket: #fff;
+        --holo-button-fill: linear-gradient(
+            135deg, 
+            #0b4fd6, 
+            #2f7bff
+        );
     }
 }
 

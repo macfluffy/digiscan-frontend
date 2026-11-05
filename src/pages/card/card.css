@@ -1,6 +1,3 @@
-@import "../../shared/styles/CRT.css";
-@import "../../shared/components/crtTheme/displayWindow/displayWindow.css";
-
 .card-display {
     align-items: flex-start;
 }

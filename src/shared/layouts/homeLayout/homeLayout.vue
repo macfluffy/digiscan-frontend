@@ -1,6 +1,6 @@
 <script setup>
     import Footer from '../../components/footer/footer.vue';
-    import crtLayout from '../../components/crtTheme/crtLayout.vue';
+    import crtLayout from '../crtLayout/crtLayout.vue';
 </script>
 
 <template>
