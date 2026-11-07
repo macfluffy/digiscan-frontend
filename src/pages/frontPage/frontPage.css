@@ -35,14 +35,8 @@
 }
 
 .front-page-buttons {    
-    background-color: var(--blue-button-background);
-    color: var(--button-text-colour);
-    border: 0.5px solid var(--button-text-colour);
-    padding: 0.4rem;
-
-    &:hover {
-        background-color: var(--light-blue-button-background);
-    }
+    padding: 0.5rem 1rem;
+    background: var(--holo-button-fill);
 }
 
 #front-page-news {

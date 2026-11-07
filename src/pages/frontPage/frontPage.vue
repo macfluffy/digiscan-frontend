@@ -36,9 +36,9 @@
         </div>
         
         <section class="flex-container flex-rows" id="front-page-menu">
-            <button class="front-page-buttons holographic-buttons" @click="gotoAdvancedSearch">Advanced Search</button>
-            <button class="front-page-buttons holographic-buttons" @click="viewAllSets">View All Sets</button>
-            <button class="front-page-buttons holographic-buttons" @click="viewAllCards">Random Card</button>
+            <button class="front-page-buttons holographic-button" @click="gotoAdvancedSearch">Advanced Search</button>
+            <button class="front-page-buttons holographic-button" @click="viewAllSets">View All Sets</button>
+            <button class="front-page-buttons holographic-button" @click="viewAllCards">Random Card</button>
         </section>
         
         <section class="flex-container flex-rows" id="front-page-news">
