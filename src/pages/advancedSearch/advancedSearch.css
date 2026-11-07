@@ -4,6 +4,10 @@
 
 fieldset {
     margin-top: 20px;
+
+    P {
+        font-family: var(--card-detail-font-family);
+    }
 }
 
 .advanced-search-label {
@@ -16,8 +20,6 @@ fieldset {
     color: var(--panel-accent);
 
     padding-right: 20px;
-
-    text-align: end;
 }
 
 .advanced-search-input {
@@ -30,7 +32,7 @@ fieldset {
 }
 
 .advanced-search-text-input {
-    flex-grow: 0.7;
+    flex-grow: 1;
 
     height: 40px;
     padding: 0 12px;
@@ -40,8 +42,7 @@ fieldset {
     caret-color: var(--holo-edge);
     background: var(--holo-input-fill);
     border: 1px solid var(--holo-border);
-    box-shadow: var(--holo-tag-glow);
-    
+    box-shadow: var(--holo-tag-glow);  
 }
 
 label {
@@ -90,6 +91,17 @@ label {
 
 .dropdown-menu {
     cursor: pointer;
+
+    backdrop-filter: blur(6px);
+    background: var(--holo-fill);
+    
+    border: 1px solid var(--holo-border);
+    box-shadow: var(--holo-glow);
+
+    padding: 10px;
+
+    color: var(--panel-text);
+    font-family: var(--card-detail-font-family);
 }
 
 #advanced-search-button {

@@ -162,7 +162,6 @@
         <fieldset class="flex-container flex-rows advanced-search-input" 
             id="card-level">
             <h3 class="advanced-search-label">Card Level</h3>
-            <p>Card includes:</p>
             <label v-for="level in levels" :key="level">
                 <input 
                     type="checkbox" 
@@ -192,6 +191,8 @@
                 />
                 {{ colour }}
             </label>
+            
+            
         </fieldset>
 
         <fieldset class="flex-container flex-rows advanced-search-input" 
