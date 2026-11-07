@@ -17,6 +17,7 @@
     --card-detail-font-family: 'Play', sans-serif;
     --panel-text: #fff;
     --effect-title-font: 22px 'Geo', sans-serif;
+    --effect-title-font-family: 'Geo', sans-serif;
     
     &[data-theme = "dark"] {
         --body-bg-colour: #0b2160;

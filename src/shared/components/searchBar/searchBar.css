@@ -1,3 +1,13 @@
 .search-bar {
     width: 100%;
+
+    font: 16px 'VT323', monospace;
+    letter-spacing: .05em;
+    color: var(--input-text);
+    caret-color: var(--holo-edge);
+    background: var(--holo-input-fill);
+    border: 1px solid var(--holo-border);
+    box-shadow: var(--holo-tag-glow); 
+    
+    padding: 0.3rem 0.5rem;
 }

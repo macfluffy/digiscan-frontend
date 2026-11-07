@@ -20,10 +20,6 @@
 #front-page-search-bar {
     max-width: 100%;
     width: 35rem;
-    
-    border: 1px solid #ccc;
-    border-radius: 0.5rem;
-    padding: 0.5rem;
     margin: 1rem;
 }
 
@@ -43,4 +39,9 @@
     margin: 1rem;
     text-align: flex-start;
     width: 100%;
+
+    h2 {
+        font-family: var(--effect-title-font-family);
+        color: var(--panel-accent);
+    }
 }
