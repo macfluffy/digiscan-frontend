@@ -50,7 +50,8 @@
 
         --holo-tag-glow: 0 0 10px rgba(94, 231, 255, .25);
 
-         --holo-button-border: #9ff2ff;
+        /* Button Variables */
+        --holo-button-border: #9ff2ff;
         --holo-button-glow: 
             0 0 22px rgba(94, 231, 255, .55), 
             inset 0 0 18px rgba(94, 231, 255, .25);
@@ -96,7 +97,8 @@
 
         --holo-tag-glow: 0 0 10px rgba(47, 123, 255, .3);
 
-        --holo-button-border: rgba(255,255,255,.85);
+        /* Button Variables */
+        --holo-button-border: rgba(255, 255, 255, .85);
         --holo-button-glow: 
             0 0 22px rgba(47, 123, 255, .6), 
             inset 0 0 14px rgba(255, 255, 255, .35);
@@ -122,22 +124,21 @@
         linear-gradient(var(--holo-bracket), var(--holo-bracket)) 0 100%/2px 14px no-repeat,
         linear-gradient(var(--holo-bracket), var(--holo-bracket)) 100% 100%/2px 14px no-repeat;
 
-    --holo-btn-brackets:
-        linear-gradient(var(--holo-btn-bracket), var(--holo-btn-bracket)) 0 0/10px 2px no-repeat,
-        linear-gradient(var(--holo-btn-bracket), var(--holo-btn-bracket)) 0 0/2px 10px no-repeat,
-        linear-gradient(var(--holo-btn-bracket), var(--holo-btn-bracket)) 100% 0/10px 2px no-repeat,
-        linear-gradient(var(--holo-btn-bracket), var(--holo-btn-bracket)) 100% 0/2px 10px no-repeat,
-        linear-gradient(var(--holo-btn-bracket), var(--holo-btn-bracket)) 0 100%/10px 2px no-repeat,
-        linear-gradient(var(--holo-btn-bracket), var(--holo-btn-bracket)) 100% 100%/10px 2px no-repeat,
-        linear-gradient(var(--holo-btn-bracket), var(--holo-btn-bracket)) 0 100%/2px 10px no-repeat,
-        linear-gradient(var(--holo-btn-bracket), var(--holo-btn-bracket)) 100% 100%/2px 10px no-repeat;
+    --holo-button-brackets:
+        linear-gradient(var(--holo-button-bracket), var(--holo-button-bracket)) 0 0/10px 2px no-repeat,
+        linear-gradient(var(--holo-button-bracket), var(--holo-button-bracket)) 0 0/2px 10px no-repeat,
+        linear-gradient(var(--holo-button-bracket), var(--holo-button-bracket)) 100% 0/10px 2px no-repeat,
+        linear-gradient(var(--holo-button-bracket), var(--holo-button-bracket)) 100% 0/2px 10px no-repeat,
+        linear-gradient(var(--holo-button-bracket), var(--holo-button-bracket)) 0 100%/10px 2px no-repeat,
+        linear-gradient(var(--holo-button-bracket), var(--holo-button-bracket)) 100% 100%/10px 2px no-repeat,
+        linear-gradient(var(--holo-button-bracket), var(--holo-button-bracket)) 0 100%/2px 10px no-repeat,
+        linear-gradient(var(--holo-button-bracket), var(--holo-button-bracket)) 100% 100%/2px 10px no-repeat;
     
     position: relative; 
     overflow: hidden; 
     min-height: 100vh;
     background: var(--page-bg-colour); 
-    color: var(--general-text-colour);
-    /* font-family: 'Chakra Petch', monospace; */    
+    color: var(--general-text-colour); 
 }
 
 /* soft dotted grainy texture */
