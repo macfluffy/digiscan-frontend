@@ -105,7 +105,7 @@
 </script>
 
 <template>
-    <form class="flex-container flex-columns" 
+    <form class="flex-container flex-columns holo-display-window" 
         id="advanced-search-page-container" 
         @submit.prevent="submitAdvancedSearch">
 
@@ -183,7 +183,7 @@
                 <option value="NOT">does not contain</option>
                 <option value="OR">contains at least one</option>
             </select>
-            <label v-for="colour in colours" :key="colour" class="colour-options">
+            <label v-for="colour in colours" :key="colour" class="capitalise colour-options">
                 <input
                     type="checkbox"
                     class="advanced-search-checkboxes"
