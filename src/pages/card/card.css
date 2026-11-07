@@ -9,8 +9,6 @@
 }
 
 .card-display-window {
-    --effect-title-font: 22px 'Geo', sans-serif;
-
     flex: 1 1 440px;
     
     min-width: 300px;

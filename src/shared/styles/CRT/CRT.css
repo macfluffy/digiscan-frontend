@@ -16,6 +16,7 @@
     --lcd-font-family: 'VT323', monospace;
     --card-detail-font-family: 'Play', sans-serif;
     --panel-text: #fff;
+    --effect-title-font: 22px 'Geo', sans-serif;
     
     &[data-theme = "dark"] {
         --body-bg-colour: #0b2160;
@@ -44,6 +45,7 @@
         --holo-glow: 
             0 0 22px rgba(94, 231, 255, .28), 
             inset 0 0 26px rgba(94, 231, 255, .12);
+        --holo-input-fill: rgba(76, 93, 146, 0.644);
 
         --panel-accent: #5ee7ff;
         --panel-muted: #b6d0f5;
@@ -91,6 +93,7 @@
         --holo-glow: 
             0 0 22px rgba(47, 123, 255, .35), 
             inset 0 0 26px rgba(255, 255, 255, .7);
+        --holo-input-fill: rgba(255, 255, 255, .75);
         
         --panel-accent: #0b3fb8;
         --panel-muted: #2a4a85;

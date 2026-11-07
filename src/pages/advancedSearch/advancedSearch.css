@@ -2,9 +2,22 @@
     margin-top: 20px;
 }
 
+fieldset {
+    margin-top: 20px;
+}
+
 .advanced-search-label {
     width: 15%;
     min-width: 210px;
+
+    margin: 0 0 6px;
+    font: var(--effect-title-font);
+    letter-spacing: .08em;
+    color: var(--panel-accent);
+
+    padding-right: 20px;
+
+    text-align: end;
 }
 
 .advanced-search-input {
@@ -17,8 +30,18 @@
 }
 
 .advanced-search-text-input {
-    width: 40%;
-    min-width: var(--ninety-pc-mobile-width);
+    flex-grow: 0.7;
+
+    height: 40px;
+    padding: 0 12px;
+
+    font: 22px 'VT323',monospace; letter-spacing:.05em;
+    color: var(--input-text);
+    caret-color: var(--holo-edge);
+    background: var(--holo-input-fill);
+    border: 1px solid var(--holo-border);
+    box-shadow: var(--holo-tag-glow);
+    
 }
 
 label {
@@ -28,8 +51,9 @@ label {
     background: color-mix(in srgb, var(--holo-edge) 10%, transparent);
 
     border: 1px solid var(--holo-border);
-
     padding: 5px 15px 5px 2px;
+
+    font-family: var(--card-detail-font-family);
 }
 
 .advanced-search-checkboxes {  
