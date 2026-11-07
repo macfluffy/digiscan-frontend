@@ -288,7 +288,7 @@
             </label>
         </fieldset>
 
-        <button class="holographic-buttons" id="advanced-search-button">
+        <button class="holographic-button" id="advanced-search-button">
             Search
         </button>
     </form>
