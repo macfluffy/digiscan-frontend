@@ -70,7 +70,6 @@ label {
     border: 1px solid var(--holo-border);
     margin-right: 5px;
     
-    
     &:after {
         background: var(--holo-button-brackets), var(--holo-button-fill);
     }
@@ -86,8 +85,6 @@ label {
     &:checked:hover {
         accent-color: #db0e0eef;
     }
-
-    
 }
 
 .dropdown-menu {

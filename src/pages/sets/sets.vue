@@ -32,7 +32,7 @@
 </script>
 
 <template>
-    <table class="center" id="card-sets">
+    <table class="center holo-display-window" id="card-sets">
         <thead>
             <tr>
                 <th>Set Number</th>
@@ -49,9 +49,7 @@
                 <td class="set-number">{{ set.setNumber }}</td>
                 <td>{{ set.setName }}</td>
                 <td class="block-number">
-                    &lt;
-                    <template v-if="isSingleDigit(set.blockNumber)">0</template>
-                    {{ set.blockNumber }}&gt;
+                    &lt;<span v-if="isSingleDigit(set.blockNumber)">0</span>{{ set.blockNumber }}&gt;
                 </td>
                 <td class="print-date">{{ set.printDate }}</td>
             </tr>
